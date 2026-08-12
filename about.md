@@ -16,6 +16,27 @@ Companies come to me when their database has become the thing slowing down their
 
 - Email: [mrivanlima@gmail.com](mailto:mrivanlima@gmail.com)
 - LinkedIn: [linkedin.com/in/mrivanlima](https://www.linkedin.com/in/mrivanlima/)
+- X: [@MrIvanLima](https://x.com/MrIvanLima)
 - Website: [misterivanlima.com](https://www.misterivanlima.com)
 
-If your database needs to be ready for AI, [reach out](mailto:mrivanlima@gmail.com) — I'd like to hear about it.
+If your database needs to be ready for AI, tell me a bit about your setup and I'll get back to you:
+
+<form action="https://formspree.io/f/moeawddy" method="POST" class="contact-form">
+  <p>
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; max-width: 400px; padding: 8px;">
+  </p>
+  <p>
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="_replyto" required style="width: 100%; max-width: 400px; padding: 8px;">
+  </p>
+  <p>
+    <label for="message">Tell me about your database / AI setup</label><br>
+    <textarea id="message" name="message" rows="5" required style="width: 100%; max-width: 400px; padding: 8px;"></textarea>
+  </p>
+  <input type="hidden" name="_subject" value="New contact from DbModernizer">
+  <input type="text" name="_gotcha" style="display:none">
+  <p>
+    <button type="submit" style="padding: 10px 20px; background: #123a52; color: #ffffff; border: none; border-radius: 4px; cursor: pointer;">Send</button>
+  </p>
+</form>
