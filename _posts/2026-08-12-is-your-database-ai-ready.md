@@ -4,7 +4,7 @@ description: "Only 7% of enterprises say their data is fully AI-ready. Here's wh
 date: 2026-08-12 10:15:00 -0400
 categories: [governance]
 tags: [ai-readiness, data-modernization, database-strategy]
-image: /DbModernizer/assets/images/is-your-database-ai-ready-01.png
+image: /assets/images/is-your-database-ai-ready-01.png
 ---
 
 Most companies investing in AI right now don't have a model problem. They have a database problem, and the numbers back that up: according to a [2026 report from Cloudera and Harvard Business Review Analytic Services](https://www.cloudera.com/about/news-and-blogs/press-releases/2026-03-05-only-7-percent-of-enterprises-say-their-data-is-completely-ready-for-ai-according-to-new-report-from-cloudera-and-harvard-business-review-analytic-services-reveals.html){:target="_blank" rel="noopener noreferrer"}, only 7% of enterprises say their data is completely ready for AI. A separate [CIO.com survey](https://www.cio.com/article/4170978/nearly-every-enterprise-is-investing-in-ai-but-only-5-say-their-data-is-ready.html){:target="_blank" rel="noopener noreferrer"} puts it even lower — 5%, even as nearly every enterprise is actively investing.
