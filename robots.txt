@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mrivanlima.github.io/DbModernizer/sitemap.xml

@@ -1,0 +1,15 @@
+# DbModernizer
+
+> Ivan Lima's site on database modernization for AI systems: indexing and performance, CI/CD for data platforms, data engineering, vector databases, AI semantics, and the future impact of quantum computing on databases.
+
+Ivan Lima is a data engineer specializing in SQL Server, Azure, and building CI/CD, automation, and AI-ready data platforms. This site publishes practical, technical writing aimed at engineering teams whose databases are the bottleneck in delivering reliable AI features, and it serves as the professional home for his database modernization consulting work.
+
+## Key sections
+
+- [About](https://mrivanlima.github.io/DbModernizer/about/): Background on Ivan Lima and how to get in touch.
+- [Services](https://mrivanlima.github.io/DbModernizer/services/): Database modernization services offered — performance audits, CI/CD for data platforms, vector database and AI semantics readiness, data engineering, and modernization roadmaps.
+- [Blog](https://mrivanlima.github.io/DbModernizer/): Ongoing posts on indexing, performance, CI/CD, data engineering, vector databases, AI semantics, and quantum computing's future impact on databases.
+
+## Contact
+
+For database modernization inquiries: mrivanlima@gmail.com or https://www.linkedin.com/in/mrivanlima/

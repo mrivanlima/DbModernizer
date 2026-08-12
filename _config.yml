@@ -1,0 +1,40 @@
+title: "DbModernizer"
+description: >-
+  Database modernization for AI: indexing, performance, CI/CD, vector
+  databases, AI semantics, and data engineering — with an eye on quantum's
+  future impact on data systems. Written by Ivan Lima.
+url: "https://mrivanlima.github.io"
+baseurl: "/DbModernizer"
+
+author:
+  name: Ivan Lima
+
+logo: null
+
+theme: minima
+minima:
+  skin: classic
+  social_links:
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/mrivanlima/" }
+    - { platform: github, user_url: "https://github.com/mrivanlima" }
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+header_pages:
+  - about.md
+  - services.md
+
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+future: false
+show_excerpts: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
