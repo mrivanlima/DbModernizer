@@ -17,6 +17,7 @@ Companies come to me when their database has become the thing slowing down their
 - Email: [mrivanlima@gmail.com](mailto:mrivanlima@gmail.com)
 - LinkedIn: [linkedin.com/in/mrivanlima](https://www.linkedin.com/in/mrivanlima/)
 - X: [@MrIvanLima](https://x.com/MrIvanLima)
+- YouTube: [@DatabaseModernizer](https://www.youtube.com/@DatabaseModernizer)
 - Website: [misterivanlima.com](https://www.misterivanlima.com)
 
 If your database needs to be ready for AI, tell me a bit about your setup and I'll get back to you:
