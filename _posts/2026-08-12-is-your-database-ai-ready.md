@@ -1,7 +1,7 @@
 ---
 title: "Is Your Database AI-Ready? The Data Behind Why Most Enterprises Aren't"
 description: "Only 7% of enterprises say their data is fully AI-ready. Here's what that gap actually looks like at the database layer, and how to close it."
-date: 2026-08-12 14:00:00 -0400
+date: 2026-08-12 10:15:00 -0400
 categories: [governance]
 tags: [ai-readiness, data-modernization, database-strategy]
 image: /DbModernizer/assets/images/is-your-database-ai-ready-01.png
