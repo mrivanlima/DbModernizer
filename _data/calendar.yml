@@ -1,0 +1,139 @@
+# Content calendar for the dbmodernizer-post skill.
+# status: planned -> published (updated automatically by the posting skill)
+- date: 2026-08-12
+  title: "Welcome to DbModernizer: Getting Databases Ready for AI"
+  bucket: announcements
+  status: published
+  slug: welcome-to-dbmodernizer
+
+- date: 2026-08-14
+  title: "Is Your Database AI-Ready? The Data Behind Why Most Enterprises Aren't"
+  bucket: governance
+  status: planned
+  slug: is-your-database-ai-ready
+
+- date: 2026-08-16
+  title: "AI Agent Guardrails for Databases: Letting AI Move Fast Without Losing the Last Word"
+  bucket: governance
+  status: planned
+  slug: ai-agent-guardrails-for-databases
+
+- date: 2026-08-18
+  title: "A Human-in-the-Loop Framework for AI Agents Writing Database Code"
+  bucket: governance
+  status: planned
+  slug: human-in-the-loop-framework-ai-database-code
+
+- date: 2026-08-20
+  title: "Indexing for AI Workloads: What Changes When Vectors Enter the Mix"
+  bucket: performance
+  status: planned
+  slug: indexing-for-ai-workloads
+
+- date: 2026-08-22
+  title: "pgvector vs. Purpose-Built Vector Databases: A 2026 Decision Framework"
+  bucket: vector-databases
+  status: planned
+  slug: pgvector-vs-purpose-built-vector-databases
+
+- date: 2026-08-24
+  title: "CI/CD for Databases: Why Most Teams Still Deploy Schema Changes by Hand"
+  bucket: ci-cd
+  status: planned
+  slug: ci-cd-for-databases
+
+- date: 2026-08-26
+  title: "Data Lineage From Raw Table to LLM Response: Why Governance Is Now a Database Problem"
+  bucket: governance
+  status: planned
+  slug: data-lineage-raw-table-to-llm-response
+
+- date: 2026-08-28
+  title: "The Database Modernization Checklist Every CTO Should Run Before Scaling AI"
+  bucket: governance
+  status: planned
+  slug: database-modernization-checklist-for-ctos
+
+- date: 2026-08-30
+  title: "Quantum Computing and Databases: What's Actually Coming vs. What's Noise"
+  bucket: quantum
+  status: planned
+  slug: quantum-computing-and-databases
+
+- date: 2026-09-01
+  title: "Why Retrieval, Not Generation, Is Your AI Bottleneck (and the Database Fix)"
+  bucket: ai-semantics
+  status: planned
+  slug: retrieval-not-generation-is-your-ai-bottleneck
+
+- date: 2026-09-03
+  title: "RAG in Production: Chunking, Hybrid Retrieval, and What Actually Moves the Needle"
+  bucket: ai-semantics
+  status: planned
+  slug: rag-in-production-chunking-hybrid-retrieval
+
+- date: 2026-09-05
+  title: "A CTO's Guide to Evaluating RAG Systems Before You Ship"
+  bucket: ai-semantics
+  status: planned
+  slug: ctos-guide-to-evaluating-rag-systems
+
+- date: 2026-09-07
+  title: "Performance Tuning for Hybrid Search: When Vector and Keyword Search Compete for Resources"
+  bucket: performance
+  status: planned
+  slug: performance-tuning-for-hybrid-search
+
+- date: 2026-09-09
+  title: "Agentic AI Data Migration: What 'AI Doing the Migration' Actually Means Now"
+  bucket: data-engineering
+  status: planned
+  slug: agentic-ai-data-migration
+
+- date: 2026-09-11
+  title: "Guardrails for Agentic Migration: How Much Should AI Touch Without Sign-Off?"
+  bucket: governance
+  status: planned
+  slug: guardrails-for-agentic-migration
+
+- date: 2026-09-13
+  title: "What I'm Watching at AI Infra Summit 2026: Data & Database Takeaways"
+  bucket: announcements
+  status: planned
+  slug: ai-infra-summit-2026-database-takeaways
+
+- date: 2026-09-15
+  title: "The Real Cost of 'AI-Ready' Data: Budgeting for Modernization Before You Budget for Models"
+  bucket: governance
+  status: planned
+  slug: real-cost-of-ai-ready-data
+
+- date: 2026-09-17
+  title: "What a 90-Day Database Modernization Engagement Actually Looks Like"
+  bucket: case-studies
+  status: planned
+  slug: 90-day-database-modernization-engagement
+
+- date: 2026-09-19
+  title: "CI/CD for Vector Indexes: Versioning Embeddings Like You Version Schema"
+  bucket: ci-cd
+  status: planned
+  slug: ci-cd-for-vector-indexes
+
+- date: 2026-09-21
+  title: "Data Quality Before AI: The Profiling Step Everyone Skips"
+  bucket: data-engineering
+  status: planned
+  slug: data-quality-before-ai-profiling-step
+
+- date: 2026-09-23
+  title: "Self-Healing Pipelines: Hype or the Next Real Thing for Data Engineering?"
+  bucket: data-engineering
+  status: planned
+  slug: self-healing-pipelines-hype-or-real
+
+- date: 2026-09-25
+  title: "Quantum-Safe Databases: Is Post-Quantum Cryptography Something You Need to Plan For Yet?"
+  bucket: quantum
+  status: planned
+  slug: quantum-safe-databases-post-quantum-cryptography
