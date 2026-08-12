@@ -1,5 +1,5 @@
 ---
-title: "Welcome to DbModernizer: Getting Databases Ready for AI"
+title: "Welcome to Data Platform Advisory: Getting Databases Ready for AI"
 description: "Why database modernization — indexing, performance, CI/CD, vector search, and data engineering — is the real bottleneck standing between most teams and working AI systems."
 date: 2026-08-12 09:00:00 -0400
 categories: [announcements]
@@ -16,4 +16,4 @@ This site is where I'll be writing about fixing that — the practical side of d
 - **Vector databases & AI semantics** — grounding AI features in well-modeled, retrievable data
 - **The road ahead** — including where quantum computing may eventually change how we think about databases
 
-If you're dealing with any of this in your own systems, or just want to follow along, subscribe to the [feed](/DbModernizer/feed.xml) or [get in touch](/DbModernizer/about/#contact).
+If you're dealing with any of this in your own systems, or just want to follow along, subscribe to the [feed](/feed.xml) or [get in touch](/about/#contact).

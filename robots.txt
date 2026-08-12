@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mrivanlima.github.io/DbModernizer/sitemap.xml
+Sitemap: https://dataplatformadvisory.com/sitemap.xml

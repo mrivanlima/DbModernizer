@@ -2,8 +2,24 @@
 # status: planned -> published (updated automatically by the posting skill)
 # type: article (default, informational) | tutorial (hands-on, code-driven, three-part:
 #   problem -> expert fix -> AI-automation angle. Companion code lives in examples/<slug>/)
+- date: 2026-02-19
+  title: 'Why Most SQL Server Modernization Projects Fail Before AI Even Begins'
+  bucket: governance
+  status: published
+  slug: why-most-sql-server-modernization-projects-fail
+  type: article
+  note: 'Migrated from dataplatformadvisory.com WordPress site during domain consolidation (2026-08-12)'
+
+- date: 2026-02-21
+  title: 'How to Design SQL Server High Availability and Disaster Recovery Using Always On Availability Groups'
+  bucket: resiliency
+  status: published
+  slug: sql-server-hadr-always-on-availability-groups
+  type: article
+  note: 'Migrated from dataplatformadvisory.com WordPress site during domain consolidation (2026-08-12)'
+
 - date: 2026-08-12
-  title: 'Welcome to DbModernizer: Getting Databases Ready for AI'
+  title: 'Welcome to Data Platform Advisory: Getting Databases Ready for AI'
   bucket: announcements
   status: published
   slug: welcome-to-dbmodernizer

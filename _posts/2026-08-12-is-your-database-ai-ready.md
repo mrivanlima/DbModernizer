@@ -40,6 +40,6 @@ None of this requires ripping out your database and starting over. It requires t
 
 If you're staring at that 7% figure and wondering which side of it you're on, the fastest way to find out isn't a full audit — it's picking the one AI feature that matters most to the business right now and tracing its data path end to end. Where does it slow down? Where does it break? Where does someone quietly patch it by hand every week? That's your real modernization scope, and it's usually a lot smaller and more specific than "modernize the database."
 
-If your team is running into this — an AI initiative that's stalled because the database underneath it wasn't built for the job — that's exactly what I help companies fix. Take a look at [what a modernization engagement looks like](/DbModernizer/services/) or [get in touch](/DbModernizer/about/#contact) and we can talk through your specific setup.
+If your team is running into this — an AI initiative that's stalled because the database underneath it wasn't built for the job — that's exactly what I help companies fix. Take a look at [what a modernization engagement looks like](/services/) or [get in touch](/about/#contact) and we can talk through your specific setup.
 
-*Ivan Lima is a data engineer specializing in database modernization for AI systems. [Get in touch](/DbModernizer/about/#contact) if your database needs to be ready for what's next.*
+*Ivan Lima is a data engineer specializing in database modernization for AI systems. [Get in touch](/about/#contact) if your database needs to be ready for what's next.*

@@ -1,10 +1,10 @@
-title: "DbModernizer"
+title: "Data Platform Advisory"
 description: >-
   Database modernization for AI: indexing, performance, CI/CD, vector
   databases, AI semantics, and data engineering — with an eye on quantum's
   future impact on data systems. Written by Ivan Lima.
-url: "https://mrivanlima.github.io"
-baseurl: "/DbModernizer"
+url: "https://dataplatformadvisory.com"
+baseurl: ""
 
 author: Ivan Lima
 email: mrivanlima@gmail.com

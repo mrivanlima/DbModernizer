@@ -35,7 +35,7 @@ If your database needs to be ready for AI, tell me a bit about your setup and I'
     <label for="message">Tell me about your database / AI setup</label><br>
     <textarea id="message" name="message" rows="5" required style="width: 100%; max-width: 400px; padding: 8px;"></textarea>
   </p>
-  <input type="hidden" name="_subject" value="New contact from DbModernizer">
+  <input type="hidden" name="_subject" value="New contact from Data Platform Advisory">
   <input type="text" name="_gotcha" style="display:none">
   <p>
     <button type="submit" style="padding: 10px 20px; background: #123a52; color: #ffffff; border: none; border-radius: 4px; cursor: pointer;">Send</button>
