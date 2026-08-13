@@ -35,7 +35,7 @@
 - date: 2026-08-13
   title: 'Diagnosing and Fixing a Slow Query, Step by Step'
   bucket: performance
-  status: planned
+  status: published
   slug: diagnosing-and-fixing-a-slow-query
   type: tutorial
 
