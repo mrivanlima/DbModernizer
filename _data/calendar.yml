@@ -42,7 +42,7 @@
 - date: 2026-08-14
   title: 'AI Agent Guardrails for Databases: Letting AI Move Fast Without Losing the Last Word'
   bucket: governance
-  status: planned
+  status: published
   slug: ai-agent-guardrails-for-databases
   type: article
 
