@@ -7,6 +7,8 @@ tags: [cloud-infrastructure, capacity-planning, ai-agents, autoscaling, future-o
 image: /assets/images/database-provisioned-for-humans-agents-broke-model-01.png
 ---
 
+![Your Database Was Provisioned for Humans. Agents Just Broke the Model](/assets/images/database-provisioned-for-humans-agents-broke-model-01.png)
+
 Most database capacity plans still assume a human is at the other end of every query: predictable business hours, gradual growth, traffic that ramps up over months, not milliseconds. AI agents don't work that way. A single agent can generate up to 450% more total traffic than a human doing the same task, and it can go from idle to a chain of hundreds of queries in the time it takes a human to read a Slack message. Most enterprises will hit real capacity limits within roughly 24 months — and the ones adopting AI fastest are the most exposed.
 
 ## What's actually happening

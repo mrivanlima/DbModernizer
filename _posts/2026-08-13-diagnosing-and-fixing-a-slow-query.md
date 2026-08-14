@@ -7,6 +7,8 @@ tags: [performance-engineering, indexing, sql-server, query-tuning]
 image: /assets/images/diagnosing-and-fixing-a-slow-query-01.png
 ---
 
+![Diagnosing and Fixing a Slow Query, Step by Step](/assets/images/diagnosing-and-fixing-a-slow-query-01.png)
+
 A query that scans an entire table to return a few thousand rows out of two million isn't a mystery — it's a missing index, and the fix usually takes ten minutes once you know where to look. This post walks through one real pattern end to end: a support dashboard that got slower every month, why it got slow, the exact fix, and a scheduled, human-approved way to catch the next one before it becomes a ticket.
 
 ## Key takeaways

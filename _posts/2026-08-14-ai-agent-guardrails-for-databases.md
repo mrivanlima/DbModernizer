@@ -7,6 +7,8 @@ tags: [ai-agents, governance, database-modernization, ci-cd]
 image: /assets/images/ai-agent-guardrails-for-databases-01.png
 ---
 
+![AI Agent Guardrails for Databases: Moving Fast, Keeping the Last Word](/assets/images/ai-agent-guardrails-for-databases-01.png)
+
 An AI agent should be allowed to propose almost any database change. It should not be allowed to *apply* every kind of database change without a human confirming it first — and the line between those two permissions is the single most important guardrail an enterprise can put in place right now. Get that line wrong in either direction and you either strangle the productivity gains or you hand an autonomous system the keys to production.
 
 This isn't a hypothetical. Database creation and schema change are becoming agent-driven by default, not by exception. Databricks has said its own usage data shows AI agents are now responsible for the bulk of database creation and nearly all dev and test branching activity inside its ecosystem [as reported by APMdigest](https://www.apmdigest.com/ai-agents-are-building-databases-whos-governing-changes){:target="_blank" rel="noopener noreferrer"}. The exact percentage varies by source, but the direction doesn't: the database, once the slowest-moving part of the stack, is now one of the fastest-changing.

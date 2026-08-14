@@ -8,6 +8,8 @@ permalink: /why-most-sql-server-modernization-projects-fail-before-ai-even-begin
 image: /assets/images/modernization-failure-01.png
 ---
 
+![Why Most SQL Server Modernization Projects Fail Before AI Even Begins](/assets/images/modernization-failure-01.png)
+
 Most SQL Server modernization projects fail for one of four reasons: the team treats cloud migration as if it were modernization, performance engineering stays reactive instead of built-in, governance is added after the fact instead of from day one, or AI gets layered onto a database that was never structurally ready for it. None of these are tooling problems — they're architectural decisions made (or skipped) early, and they compound.
 
 ### Key takeaways

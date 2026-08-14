@@ -8,6 +8,8 @@ permalink: /how-to-design-sql-server-high-availability-and-disaster-recovery-usi
 image: /assets/images/sql-server-hadr-architecture-01.png
 ---
 
+![How to Design SQL Server High Availability and Disaster Recovery Using Always On Availability Groups](/assets/images/sql-server-hadr-architecture-01.png)
+
 If your database goes down, your business stops — which is exactly why High Availability (HA) and Disaster Recovery (DR) aren't optional technical features, they're operational survival mechanisms. This guide walks through the architecture of a fully isolated SQL Server HA/DR environment built with Windows Server Failover Clustering (WSFC), Always On Availability Groups, Active Directory Domain Services, and both synchronous and asynchronous replication — a design that mirrors enterprise-grade production topology.
 
 ### Key takeaways
