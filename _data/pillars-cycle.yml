@@ -1,0 +1,14 @@
+# Rotation log for the dbmodernizer-pillars-post skill.
+# Each entry records one day's deep-dive post in the 8 Pillars series.
+# The skill reads the most recent entry's pillar_number and picks the next
+# one in sequence (wrapping from 8 back to 1) for today's post.
+#
+# Pillar order:
+# 1 Cloud-Scale Infrastructure        -> performance / data-engineering
+# 2 Automated Operations & CI/CD      -> ci-cd
+# 3 Intelligent Pipelines & Governance -> data-engineering / governance
+# 4 Semantic Readiness                -> ai-semantics / vector-databases
+# 5 Intelligent Resiliency            -> resiliency
+# 6 Quantum Readiness & Crypto-Agility -> quantum
+# 7 Cost & Efficiency                 -> cost-efficiency
+# 8 AI Agent Identity & Access        -> agent-access
