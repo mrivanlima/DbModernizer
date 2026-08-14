@@ -12,3 +12,8 @@
 # 6 Quantum Readiness & Crypto-Agility -> quantum
 # 7 Cost & Efficiency                 -> cost-efficiency
 # 8 AI Agent Identity & Access        -> agent-access
+
+- date: 2026-08-14
+  pillar_number: 1
+  pillar_name: "Cloud-Scale Infrastructure"
+  slug: database-provisioned-for-humans-agents-broke-model
