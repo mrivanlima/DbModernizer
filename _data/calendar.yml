@@ -116,6 +116,15 @@
   slug: data-lineage-raw-table-to-llm-response
   type: article
 
+- date: 2026-08-25
+  title: 'Inside a Real Cascading Failure: How a Job Queue Bug Took Down an API for 3 Hours'
+  bucket: case-studies
+  status: planned
+  slug: redocly-cascading-failure-case-study
+  type: article
+  source_url: https://redocly.com/blog/jan-2026-outage-postmortem
+  note: "Case-study analysis of Redocly's January 2026 incident: a logic error in a background job queue overloaded the database, exhausted their secrets engine, and took down their main API for ~3 hours on two separate days. Summarize objectively, cite Redocly directly and prominently, then add Data Platform Advisory's own perspective on governance/architecture choices that could have contained the blast radius, and alternative approaches worth considering. Never reproduce large verbatim chunks of the source post."
+
 - date: 2026-08-26
   title: The Database Modernization Checklist Every CTO Should Run Before Scaling AI
   bucket: governance
@@ -136,6 +145,15 @@
   status: planned
   slug: retrieval-not-generation-is-your-ai-bottleneck
   type: article
+
+- date: 2026-09-02
+  title: 'The $50K Migration: What a 4-Hour Production Lock Actually Costs'
+  bucket: case-studies
+  status: planned
+  slug: four-hour-production-lock-migration-case-study
+  type: article
+  source_url: https://medium.com/engineering-playbook/the-database-migration-that-locked-production-for-4-hours-complete-postmortem-1a4955f64b63
+  note: "Case-study analysis of a real first-person postmortem: a schema migration locked production for 4 hours, costing roughly $50K, because it held an AccessExclusiveLock too long. The team rebuilt their process around short lock windows, staging tests against large datasets, and breaking changes into smaller steps. Summarize objectively, cite the original postmortem prominently, then add Data Platform Advisory's own CI/CD guardrails and alternative migration-safety approaches. Never reproduce large verbatim chunks of the source post."
 
 - date: 2026-09-03
   title: 'RAG in Production: Chunking, Hybrid Retrieval, and What Actually Moves the Needle'
@@ -165,6 +183,15 @@
   slug: agentic-ai-data-migration
   type: article
 
+- date: 2026-09-10
+  title: 'The ANALYZE Command That Took Down 95% of Traffic: A Query Plan Flip Case Study'
+  bucket: case-studies
+  status: planned
+  slug: clerk-query-plan-flip-case-study
+  type: article
+  source_url: https://clerk.com/blog/2026-02-19-system-outage-postmortem
+  note: "Case-study analysis of Clerk's February 19, 2026 outage: a routine auto-ANALYZE triggered a query plan flip that collapsed database performance, causing over 95% of traffic to return 429s for roughly 90 minutes until the ANALYZE was manually re-run. Summarize objectively, cite Clerk directly and prominently, then add Data Platform Advisory's own perspective on statistics/plan-stability monitoring and alternative prevention approaches. Never reproduce large verbatim chunks of the source post."
+
 - date: 2026-09-11
   title: 'Guardrails for Agentic Migration: How Much Should AI Touch Without Sign-Off?'
   bucket: governance
@@ -192,6 +219,15 @@
   status: planned
   slug: 90-day-database-modernization-engagement
   type: article
+
+- date: 2026-09-18
+  title: 'When a Routine Cloud SQL Migration Becomes a Full Outage: A Resiliency Case Study'
+  bucket: case-studies
+  status: planned
+  slug: clerk-cloud-sql-migration-outage-case-study
+  type: article
+  source_url: https://clerk.com/blog/2026-03-10-service-outage-postmortem
+  note: "Case-study analysis of Clerk's March 10, 2026 outage: a failed live migration of their Google Cloud SQL VM caused a sharp increase in disk latency and lock contention, escalating into a complete service outage. Summarize objectively, cite Clerk directly and prominently, then add Data Platform Advisory's own perspective on migration-window risk management, HA/DR posture, and alternative approaches. Never reproduce large verbatim chunks of the source post."
 
 - date: 2026-09-19
   title: 'CI/CD for Vector Indexes: Versioning Embeddings Like You Version Schema'
