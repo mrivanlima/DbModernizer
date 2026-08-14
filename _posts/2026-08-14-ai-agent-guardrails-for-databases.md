@@ -1,7 +1,7 @@
 ---
 title: "AI Agent Guardrails for Databases: Moving Fast, Keeping the Last Word"
 description: "AI agents can now create databases and ship schema changes faster than any human team. Here's how to let them move fast without losing human sign-off on the changes that matter."
-date: 2026-08-14 09:15:00 -0400
+date: 2026-08-14 09:30:00 -0400
 categories: [governance]
 tags: [ai-agents, governance, database-modernization, ci-cd]
 image: /assets/images/ai-agent-guardrails-for-databases-01.png
