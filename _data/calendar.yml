@@ -111,6 +111,15 @@
   slug: ci-cd-for-databases
   type: article
 
+- date: 2026-08-22
+  title: 'How a Routine Database Permission Change Took Down Half the Internet: The Cloudflare Outage'
+  bucket: case-studies
+  status: planned
+  slug: cloudflare-november-2025-outage-case-study
+  type: article
+  source_url: https://blog.cloudflare.com/18-november-2025-outage/
+  note: "Part of the 'Real Incidents' case-studies series (same template as the first post, redocly-cascading-failure-case-study) — published as a bonus second post one hour after the regular daily post per Ivan's standing instruction (never displace an existing scheduled post; stack case studies 1 hour apart when the Saturday is already filled). Case-study analysis of Cloudflare's November 18, 2025 outage: a permission change to a ClickHouse database system caused a query to return duplicate rows, doubling the size of a 'feature file' used by Cloudflare's Bot Management system past a hard-coded size limit, which then propagated to their entire network and crashed the core proxy for hours, taking down X, ChatGPT, Shopify, and many other major sites. Summarize objectively, cite Cloudflare's own postmortem directly and prominently, then add Data Platform Advisory's own perspective on config/data validation, blast-radius containment for internal data files, and safer rollout patterns for database permission changes. Never reproduce large verbatim chunks of the source post."
+
 - date: 2026-08-23
   title: "N+1 Queries: Catching the ORM Pattern That's Quietly Killing Your Database"
   bucket: data-engineering
@@ -139,6 +148,15 @@
   slug: quantum-computing-and-databases
   type: article
 
+- date: 2026-08-29
+  title: "When Success Becomes the Outage: Inside Neon's IP Exhaustion Incident"
+  bucket: case-studies
+  status: planned
+  slug: neon-ip-exhaustion-case-study
+  type: article
+  source_url: https://neon.com/blog/an-apology-and-a-recap-on-may-june-stability
+  note: "Part of the 'Real Incidents' case-studies series, on its normal Saturday slot (no stacking needed, day was open). Case-study analysis of Neon's May 16 and May 19, 2025 outages: a Postgres query-plan regression on the control plane's own backing database caused CPU saturation, which stopped the control plane from suspending idle compute VMs, which exhausted available IP addresses in the Kubernetes subnet — driven by a 5x surge in database creation from agentic AI platforms. Summarize objectively, cite Neon's own recap/postmortem directly and prominently, then add Data Platform Advisory's own perspective on capacity planning for AI-driven database creation, query-plan regression monitoring on control-plane databases, and IP/subnet headroom planning. Never reproduce large verbatim chunks of the source post."
+
 - date: 2026-09-01
   title: Why Retrieval, Not Generation, Is Your AI Bottleneck (and the Database Fix)
   bucket: ai-semantics
@@ -159,6 +177,15 @@
   status: planned
   slug: ctos-guide-to-evaluating-rag-systems
   type: article
+
+- date: 2026-09-05
+  title: "Anatomy of an API Outage: What Broke When Cloudflare's Dashboard Went Down"
+  bucket: case-studies
+  status: planned
+  slug: cloudflare-september-2025-dashboard-api-outage-case-study
+  type: article
+  source_url: https://blog.cloudflare.com/deep-dive-into-cloudflares-sept-12-dashboard-and-api-outage/
+  note: "Part of the 'Real Incidents' case-studies series — published as a bonus second post one hour after the regular daily post (stacked, not displacing the existing entry), per Ivan's standing instruction. Case-study analysis of Cloudflare's September 12, 2025 dashboard and API outage. Summarize objectively from Cloudflare's own deep-dive postmortem, cite it prominently, then add Data Platform Advisory's own perspective on control-plane/data-plane separation and dependency isolation for admin/API surfaces. Never reproduce large verbatim chunks of the source post."
 
 - date: 2026-09-07
   title: 'Performance Tuning for Hybrid Search: When Vector and Keyword Search Compete for Resources'
@@ -218,6 +245,15 @@
   slug: ci-cd-for-vector-indexes
   type: article
 
+- date: 2026-09-19
+  title: "The Replica That Couldn't Keep Up: How Database Lag Broke GitHub Authentication"
+  bucket: case-studies
+  status: planned
+  slug: github-replication-lag-outage-case-study
+  type: article
+  source_url: https://github.blog/news-insights/company-news/github-availability-report-february-2026/
+  note: "Part of the 'Real Incidents' case-studies series — published as a bonus second post one hour after the regular daily post (stacked, not displacing the existing entry), per Ivan's standing instruction. Case-study analysis of GitHub's February 17, 2026 authentication outage: write volume to the token-verification database cluster grew past what older replica hosts could keep up with, replication lag increased, and inconsistent token lookups caused intermittent auth failures across Actions, Git, and other authenticated requests for about two hours. Summarize objectively, cite GitHub's own availability report directly and prominently, then add Data Platform Advisory's own perspective on replica-lag monitoring, read routing away from lagging replicas, and capacity planning for write-heavy verification/token stores. Never reproduce large verbatim chunks of the source post."
+
 - date: 2026-09-21
   title: 'Data Quality Before AI: The Profiling Step Everyone Skips'
   bucket: data-engineering
@@ -257,3 +293,38 @@
   source_url: https://clerk.com/blog/2026-03-10-service-outage-postmortem
   note: "Case-study analysis of Clerk's March 10, 2026 outage: a failed live migration of their Google Cloud SQL VM caused a sharp increase in disk latency and lock contention, escalating into a complete service outage. Summarize objectively, cite Clerk directly and prominently, then add Data Platform Advisory's own perspective on migration-window risk management, HA/DR posture, and alternative approaches. Never reproduce large verbatim chunks of the source post."
 
+- date: 2026-10-10
+  title: 'One Storage Dependency, Platform-Wide Failure: The Cloudflare Workers KV Outage'
+  bucket: case-studies
+  status: planned
+  slug: cloudflare-workers-kv-outage-case-study
+  type: article
+  source_url: https://blog.cloudflare.com/cloudflare-service-outage-june-12-2025/
+  note: "Part of the 'Real Incidents' case-studies series, on its normal Saturday slot. Case-study analysis of Cloudflare's June 12, 2025 outage: a failure in the underlying storage infrastructure behind Workers KV — a shared dependency used across many unrelated Cloudflare products (Access, Gateway, Images, Stream, Workers AI, the Dashboard, and more) — took down all of them simultaneously for over two hours. Summarize objectively, cite Cloudflare's own postmortem directly and prominently, then add Data Platform Advisory's own perspective on shared-dependency risk, why a single storage layer becoming a single point of failure for unrelated products is a governance/architecture problem, and isolation patterns worth considering. Never reproduce large verbatim chunks of the source post."
+
+- date: 2026-10-17
+  title: "Compute That Wouldn't Wake Up: Inside Neon's Delayed-Start Incident"
+  bucket: case-studies
+  status: planned
+  slug: neon-delayed-start-compute-case-study
+  type: article
+  source_url: https://neon.com/blog/postmortem-delayed-start-compute-operations
+  note: "Part of the 'Real Incidents' case-studies series, on its normal Saturday slot. Case-study analysis of Neon's 'Delayed Start Compute Operations' incident, a separate failure mode from the May IP-exhaustion incident already covered on 2026-08-29 — worth noting explicitly in the post that this is a second, distinct Neon incident so the two aren't confused. Summarize objectively, cite Neon's own postmortem directly and prominently, then add Data Platform Advisory's own perspective on cold-start/wake latency design for serverless databases and the operational tradeoffs of scale-to-zero architectures. Never reproduce large verbatim chunks of the source post."
+
+- date: 2026-10-24
+  title: "The Postmortem Every Engineer Should Read: GitLab's 2017 Database Outage"
+  bucket: case-studies
+  status: planned
+  slug: gitlab-2017-database-outage-case-study
+  type: article
+  source_url: https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/
+  note: "Part of the 'Real Incidents' case-studies series, on its normal Saturday slot. This is the series' first 'hall of fame' entry — an older (2017) but still widely cited incident, included deliberately for its exceptional transparency and detail rather than recency; frame it explicitly in the post's opening as 'still one of the most instructive postmortems ever published, worth revisiting even years later.' Case-study analysis of GitLab's January 31, 2017 outage: an engineer, attempting to clear replication lag by removing data from what they believed was a secondary database, ran the deletion against the primary instead, removing ~300GB of production data; the incident was compounded by all 5 of GitLab's backup/replication mechanisms failing or being misconfigured at the time, so recovery relied on a manual snapshot taken ~6 hours before the incident. Summarize objectively, cite GitLab's own postmortem directly and prominently, then add Data Platform Advisory's own perspective on backup verification (an untested backup is not a backup), environment-identification safeguards for destructive commands, and how this maps to the 8 Pillars framework. Never reproduce large verbatim chunks of the source post."
+
+- date: 2026-10-31
+  title: "73 Hours Down: What Really Broke Inside Roblox's Historic Outage"
+  bucket: case-studies
+  status: planned
+  slug: roblox-73-hour-outage-case-study
+  type: article
+  source_url: https://blog.roblox.com/2022/01/roblox-return-to-service-10-28-10-31-2021/
+  note: "Part of the 'Real Incidents' case-studies series, on its normal Saturday slot. Another 'hall of fame' entry, included for depth and instructiveness rather than recency (October 2021) — frame similarly to the GitLab 2017 entry. Case-study analysis of Roblox's October 28-31, 2021 outage, one of the longest and most thoroughly documented outages in the industry: a storage-engine issue in Consul (used for service discovery, health checks, and session locking) combined with unusually high database read/write load and a newly enabled streaming feature, causing write contention and a slow-building failure that took 73 hours to fully resolve. Summarize objectively, cite Roblox's own postmortem directly and prominently, then add Data Platform Advisory's own perspective on service-discovery/database coupling, staged feature rollouts under load, and why some recoveries take days rather than hours when core infrastructure dependencies fail. Never reproduce large verbatim chunks of the source post."
