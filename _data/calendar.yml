@@ -53,6 +53,15 @@
   slug: building-and-killing-a-deadlock
   type: tutorial
 
+- date: 2026-08-15
+  title: 'Inside a Real Cascading Failure: How a Job Queue Bug Took Down an API for 3 Hours'
+  bucket: case-studies
+  status: planned
+  slug: redocly-cascading-failure-case-study
+  type: article
+  source_url: https://redocly.com/blog/jan-2026-outage-postmortem
+  note: "First post in the case-studies series, published 2026-08-15 as a bonus second post one hour after the regular tutorial (per Ivan's request) rather than waiting for the next Saturday. Case-study analysis of Redocly's January 2026 incident: a logic error in a background job queue overloaded the database, exhausted their secrets engine, and took down their main API for ~3 hours on two separate days. Summarize objectively, cite Redocly directly and prominently, then add Data Platform Advisory's own perspective on governance/architecture choices that could have contained the blast radius, and alternative approaches worth considering. Never reproduce large verbatim chunks of the source post."
+
 - date: 2026-08-16
   title: A Human-in-the-Loop Framework for AI Agents Writing Database Code
   bucket: governance
@@ -129,15 +138,6 @@
   status: planned
   slug: quantum-computing-and-databases
   type: article
-
-- date: 2026-08-29
-  title: 'Inside a Real Cascading Failure: How a Job Queue Bug Took Down an API for 3 Hours'
-  bucket: case-studies
-  status: planned
-  slug: redocly-cascading-failure-case-study
-  type: article
-  source_url: https://redocly.com/blog/jan-2026-outage-postmortem
-  note: "Case-study analysis of Redocly's January 2026 incident: a logic error in a background job queue overloaded the database, exhausted their secrets engine, and took down their main API for ~3 hours on two separate days. Summarize objectively, cite Redocly directly and prominently, then add Data Platform Advisory's own perspective on governance/architecture choices that could have contained the blast radius, and alternative approaches worth considering. Never reproduce large verbatim chunks of the source post."
 
 - date: 2026-09-01
   title: Why Retrieval, Not Generation, Is Your AI Bottleneck (and the Database Fix)
@@ -247,7 +247,6 @@
   type: article
   source_url: https://clerk.com/blog/2026-02-19-system-outage-postmortem
   note: "Case-study analysis of Clerk's February 19, 2026 outage: a routine auto-ANALYZE triggered a query plan flip that collapsed database performance, causing over 95% of traffic to return 429s for roughly 90 minutes until the ANALYZE was manually re-run. Summarize objectively, cite Clerk directly and prominently, then add Data Platform Advisory's own perspective on statistics/plan-stability monitoring and alternative prevention approaches. Never reproduce large verbatim chunks of the source post."
-
 
 - date: 2026-10-03
   title: 'When a Routine Cloud SQL Migration Becomes a Full Outage: A Resiliency Case Study'
