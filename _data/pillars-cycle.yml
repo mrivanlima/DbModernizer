@@ -17,3 +17,7 @@
   pillar_number: 1
   pillar_name: "Cloud-Scale Infrastructure"
   slug: database-provisioned-for-humans-agents-broke-model
+- date: 2026-08-15
+  pillar_number: 2
+  pillar_name: "Automated Operations & CI/CD"
+  slug: parallel-ai-agents-schema-migration-review-gap
