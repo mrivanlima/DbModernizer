@@ -56,7 +56,7 @@
 - date: 2026-08-15
   title: 'Inside a Real Cascading Failure: How a Job Queue Bug Took Down an API for 3 Hours'
   bucket: case-studies
-  status: planned
+  status: published
   slug: redocly-cascading-failure-case-study
   type: article
   source_url: https://redocly.com/blog/jan-2026-outage-postmortem

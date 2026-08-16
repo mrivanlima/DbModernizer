@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#0F2540"/>
+<text x="600" y="55" font-family="Cambria, Georgia, serif" font-size="30" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Anatomy of a Cascading Failure</text>
+<text x="600" y="85" font-family="Calibri, Arial, sans-serif" font-size="16" fill="#C9D9E3" text-anchor="middle">Redocly, January 14 2026 — six steps, one API outage</text>
+
+<!-- step boxes -->
+<g font-family="Calibri, Arial, sans-serif">
+<!-- 1 -->
+<rect x="40" y="140" width="170" height="110" rx="8" fill="#16324F" stroke="#8FD3C7" stroke-width="2"/>
+<text x="125" y="168" fill="#8FD3C7" font-size="14" text-anchor="middle" font-weight="bold">1. Job fails</text>
+<text x="125" y="190" fill="#FFFFFF" font-size="12" text-anchor="middle">Cleanup job in</text>
+<text x="125" y="206" fill="#FFFFFF" font-size="12" text-anchor="middle">RabbitMQ errors,</text>
+<text x="125" y="222" fill="#FFFFFF" font-size="12" text-anchor="middle">no backoff logic</text>
+
+<!-- arrow -->
+<polygon points="210,195 240,195 240,188 260,200 240,212 240,205 210,205" fill="#8FD3C7"/>
+
+<!-- 2 -->
+<rect x="260" y="140" width="170" height="110" rx="8" fill="#16324F" stroke="#8FD3C7" stroke-width="2"/>
+<text x="345" y="168" fill="#8FD3C7" font-size="14" text-anchor="middle" font-weight="bold">2. Infinite retry</text>
+<text x="345" y="190" fill="#FFFFFF" font-size="12" text-anchor="middle">Redelivers every</text>
+<text x="345" y="206" fill="#FFFFFF" font-size="12" text-anchor="middle">20s, no retry cap,</text>
+<text x="345" y="222" fill="#FFFFFF" font-size="12" text-anchor="middle">hammers one table</text>
+
+<polygon points="430,195 460,195 460,188 480,200 460,212 460,205 430,205" fill="#8FD3C7"/>
+
+<!-- 3 -->
+<rect x="480" y="140" width="170" height="110" rx="8" fill="#16324F" stroke="#8FD3C7" stroke-width="2"/>
+<text x="565" y="168" fill="#8FD3C7" font-size="14" text-anchor="middle" font-weight="bold">3. DB saturation</text>
+<text x="565" y="190" fill="#FFFFFF" font-size="12" text-anchor="middle">API runs out of</text>
+<text x="565" y="206" fill="#FFFFFF" font-size="12" text-anchor="middle">memory and</text>
+<text x="565" y="222" fill="#FFFFFF" font-size="12" text-anchor="middle">crashes (OOM)</text>
+
+<polygon points="650,195 680,195 680,188 700,200 680,212 680,205 650,205" fill="#8FD3C7"/>
+
+<!-- 4 -->
+<rect x="700" y="140" width="170" height="110" rx="8" fill="#16324F" stroke="#8FD3C7" stroke-width="2"/>
+<text x="785" y="168" fill="#8FD3C7" font-size="14" text-anchor="middle" font-weight="bold">4. Restart storm</text>
+<text x="785" y="190" fill="#FFFFFF" font-size="12" text-anchor="middle">Every restart asks</text>
+<text x="785" y="206" fill="#FFFFFF" font-size="12" text-anchor="middle">secrets engine for</text>
+<text x="785" y="222" fill="#FFFFFF" font-size="12" text-anchor="middle">new DB creds</text>
+
+<polygon points="870,195 900,195 900,188 920,200 900,212 900,205 870,205" fill="#8FD3C7"/>
+
+<!-- 5 -->
+<rect x="920" y="140" width="170" height="110" rx="8" fill="#16324F" stroke="#F2C57C" stroke-width="2"/>
+<text x="1005" y="168" fill="#F2C57C" font-size="14" text-anchor="middle" font-weight="bold">5. Secrets exhausted</text>
+<text x="1005" y="190" fill="#FFFFFF" font-size="12" text-anchor="middle">~1,900 stale roles</text>
+<text x="1005" y="206" fill="#FFFFFF" font-size="12" text-anchor="middle">hit the ceiling,</text>
+<text x="1005" y="222" fill="#FFFFFF" font-size="12" text-anchor="middle">new requests denied</text>
+
+<!-- down arrow to 6 -->
+<polygon points="1005,250 1005,275 998,275 1010,295 1022,275 1015,275 1015,250" fill="#F2C57C"/>
+
+<!-- 6 -->
+<rect x="700" y="330" width="390" height="110" rx="8" fill="#3A1620" stroke="#E4665C" stroke-width="2"/>
+<text x="895" y="360" fill="#E4665C" font-size="15" text-anchor="middle" font-weight="bold">6. Deadlock: API can't come back</text>
+<text x="895" y="384" fill="#FFFFFF" font-size="13" text-anchor="middle">Orchestrator can't schedule new API instances without</text>
+<text x="895" y="402" fill="#FFFFFF" font-size="13" text-anchor="middle">credentials the secrets engine now refuses to issue —</text>
+<text x="895" y="420" fill="#FFFFFF" font-size="13" text-anchor="middle">auth-dependent projects go down with it</text>
+</g>
+
+<!-- fix panel -->
+<rect x="40" y="330" width="620" height="110" rx="8" fill="#12331F" stroke="#8FD3C7" stroke-width="2"/>
+<text x="60" y="356" fill="#8FD3C7" font-size="14" font-weight="bold">Where a different design breaks the chain</text>
+<text x="60" y="378" fill="#FFFFFF" font-size="12">• Dead-letter queue after N retries — stops step 2 before it compounds</text>
+<text x="60" y="396" fill="#FFFFFF" font-size="12">• Short-lived creds with fast, automatic revocation — prevents step 5's ceiling</text>
+<text x="60" y="414" fill="#FFFFFF" font-size="12">• Auth as its own service, not embedded in the core API — contains step 6's blast radius</text>
+
+<text x="600" y="600" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3" text-anchor="middle">Source: Redocly's own January 2026 postmortem — dataplatformadvisory.com</text>
+</svg>
