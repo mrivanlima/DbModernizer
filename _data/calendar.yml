@@ -65,7 +65,7 @@
 - date: 2026-08-16
   title: A Human-in-the-Loop Framework for AI Agents Writing Database Code
   bucket: governance
-  status: planned
+  status: published
   slug: human-in-the-loop-framework-ai-database-code
   type: article
 
