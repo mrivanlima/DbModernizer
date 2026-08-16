@@ -21,3 +21,7 @@
   pillar_number: 2
   pillar_name: "Automated Operations & CI/CD"
   slug: parallel-ai-agents-schema-migration-review-gap
+- date: 2026-08-16
+  pillar_number: 3
+  pillar_name: "Intelligent Pipelines & Governance"
+  slug: ai-act-deadline-deferred-database-debt-wasnt
