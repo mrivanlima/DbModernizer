@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1e2e"/>
+      <stop offset="100%" stop-color="#0f2d3d"/>
+    </linearGradient>
+    <radialGradient id="glowTeal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="70" font-family="Georgia, serif" font-size="30" fill="#e6f4f1" font-weight="bold">Semantic Rot: Mixed-Space Vector Index</text>
+  <text x="60" y="98" font-family="Arial, sans-serif" font-size="16" fill="#7fb8ac">Old embeddings + new embeddings, one index, no error thrown</text>
+
+  <!-- Old model space cluster -->
+  <circle cx="330" cy="290" r="150" fill="url(#glowTeal)"/>
+  <circle cx="330" cy="290" r="140" fill="none" stroke="#3a7d78" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="330" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#9fd6cc">Embedding Space A (old model)</text>
+
+  <g fill="#2dd4bf">
+    <circle cx="270" cy="250" r="9"/>
+    <circle cx="310" cy="300" r="9"/>
+    <circle cx="360" cy="270" r="9"/>
+    <circle cx="300" cy="340" r="9"/>
+    <circle cx="380" cy="330" r="9"/>
+    <circle cx="250" cy="320" r="9"/>
+  </g>
+
+  <!-- New model space cluster -->
+  <circle cx="870" cy="290" r="150" fill="url(#glowTeal)"/>
+  <circle cx="870" cy="290" r="140" fill="none" stroke="#3a7d78" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="870" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#9fd6cc">Embedding Space B (new model)</text>
+
+  <g fill="#f0b429">
+    <circle cx="820" cy="250" r="9"/>
+    <circle cx="860" cy="300" r="9"/>
+    <circle cx="910" cy="270" r="9"/>
+    <circle cx="850" cy="340" r="9"/>
+    <circle cx="930" cy="330" r="9"/>
+    <circle cx="800" cy="320" r="9"/>
+  </g>
+
+  <!-- Same index bar -->
+  <rect x="230" y="470" width="740" height="60" rx="8" fill="#123847" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="600" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#e6f4f1">One ANN index — both vector types stored side by side</text>
+
+  <!-- connecting lines showing false comparison -->
+  <line x1="380" y1="330" x2="820" y2="330" stroke="#e05252" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="600" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#e05252" font-weight="bold">cosine similarity computed anyway — no error, no crash</text>
+  <text x="600" y="428" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#c98a8a">result: a number, not a meaningful comparison</text>
+
+  <!-- bottom label -->
+  <text x="60" y="590" font-family="Arial, sans-serif" font-size="13" fill="#5f9089">dataplatformadvisory.com</text>
+  <text x="1140" y="590" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#5f9089">8 Pillars: Semantic Readiness</text>
+</svg>

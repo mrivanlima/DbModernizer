@@ -25,3 +25,7 @@
   pillar_number: 3
   pillar_name: "Intelligent Pipelines & Governance"
   slug: ai-act-deadline-deferred-database-debt-wasnt
+- date: 2026-08-17
+  pillar_number: 4
+  pillar_name: "Semantic Readiness"
+  slug: silent-embedding-drift-vector-search
