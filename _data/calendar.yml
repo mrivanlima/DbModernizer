@@ -76,6 +76,14 @@
   slug: parameter-sniffing-fast-for-one-slow-for-everyone
   type: tutorial
 
+- date: 2026-08-17
+  title: "I Put a Firewall in Front of My Database's AI Agents"
+  bucket: case-studies
+  status: published
+  slug: ai-agent-database-firewall-sql-server
+  type: article
+  note: "Bonus, unscheduled entry in the 'Real Incidents' series, published same-day alongside the regular post. Based on Ivan's own open-source project (github.com/mrivanlima/ai-agent-db-guardrail) responding to the July 2025 Replit production-database-deletion incident and the Air Canada chatbot liability case."
+
 - date: 2026-08-18
   title: 'Indexing for AI Workloads: What Changes When Vectors Enter the Mix'
   bucket: performance
