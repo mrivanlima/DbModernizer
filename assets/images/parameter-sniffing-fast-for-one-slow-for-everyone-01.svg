@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F2540"/>
+      <stop offset="100%" stop-color="#16324f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="70" font-family="Georgia, serif" font-size="34" fill="#FFFFFF" font-weight="bold">One Cached Plan, Two Very Different Callers</text>
+  <text x="60" y="102" font-family="Arial, sans-serif" font-size="18" fill="#C9D9E3">Parameter sniffing: the plan is compiled once, then reused for every value</text>
+
+  <!-- Left box: rare param, first caller -->
+  <rect x="60" y="150" width="480" height="200" rx="10" fill="#132C4A" stroke="#8FD3C7" stroke-width="2"/>
+  <text x="90" y="188" font-family="Arial, sans-serif" font-size="20" fill="#8FD3C7" font-weight="bold">First call: @Status = 'Pending'</text>
+  <text x="90" y="220" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF">~500 matching rows</text>
+  <text x="90" y="248" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF">Compiler picks: Index Seek</text>
+  <text x="90" y="272" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF">+ Key Lookup per row</text>
+  <text x="90" y="310" font-family="Arial, sans-serif" font-size="15" fill="#C9D9E3" font-style="italic">Cheap for 500 rows.</text>
+  <text x="90" y="330" font-family="Arial, sans-serif" font-size="15" fill="#C9D9E3" font-style="italic">This plan gets cached.</text>
+
+  <!-- Right box: common param, reused plan -->
+  <rect x="660" y="150" width="480" height="200" rx="10" fill="#132C4A" stroke="#E88B7D" stroke-width="2"/>
+  <text x="690" y="188" font-family="Arial, sans-serif" font-size="20" fill="#E88B7D" font-weight="bold">Next 200 calls: @Status = 'Completed'</text>
+  <text x="690" y="220" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF">~480,000 matching rows</text>
+  <text x="690" y="248" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF">Plan NOT recompiled --</text>
+  <text x="690" y="272" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF">same Seek + Lookup reused</text>
+  <text x="690" y="310" font-family="Arial, sans-serif" font-size="15" fill="#C9D9E3" font-style="italic">480,000 key lookups instead</text>
+  <text x="690" y="330" font-family="Arial, sans-serif" font-size="15" fill="#C9D9E3" font-style="italic">of one cheap scan.</text>
+
+  <!-- Arrow between -->
+  <line x1="540" y1="250" x2="660" y2="250" stroke="#8FD3C7" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8FD3C7"/>
+    </marker>
+  </defs>
+  <text x="548" y="240" font-family="Arial, sans-serif" font-size="13" fill="#8FD3C7">plan cache</text>
+  <text x="548" y="270" font-family="Arial, sans-serif" font-size="13" fill="#8FD3C7">reuse</text>
+
+  <!-- Bottom: three fixes -->
+  <rect x="60" y="400" width="1080" height="170" rx="10" fill="#0B1D33" stroke="#3A4A5A" stroke-width="1"/>
+  <text x="90" y="435" font-family="Georgia, serif" font-size="20" fill="#FFFFFF" font-weight="bold">Three fixes, cheapest first</text>
+
+  <circle cx="115" cy="480" r="8" fill="#8FD3C7"/>
+  <text x="140" y="486" font-family="Arial, sans-serif" font-size="16" fill="#C9D9E3">OPTIMIZE FOR a representative value</text>
+
+  <circle cx="115" cy="515" r="8" fill="#8FD3C7"/>
+  <text x="140" y="521" font-family="Arial, sans-serif" font-size="16" fill="#C9D9E3">OPTION (RECOMPILE) -- fresh plan every call</text>
+
+  <circle cx="115" cy="550" r="8" fill="#8FD3C7"/>
+  <text x="140" y="556" font-family="Arial, sans-serif" font-size="16" fill="#C9D9E3">Branch the rare/critical value into its own path</text>
+
+  <text x="1140" y="556" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#8FD3C7">Data Platform Advisory</text>
+</svg>

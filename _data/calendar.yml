@@ -72,7 +72,7 @@
 - date: 2026-08-17
   title: "Parameter Sniffing: Why It's Fast for One User and Slow for Everyone Else"
   bucket: performance
-  status: planned
+  status: published
   slug: parameter-sniffing-fast-for-one-slow-for-everyone
   type: tutorial
 
