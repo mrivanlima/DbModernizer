@@ -1,0 +1,84 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F2540"/>
+      <stop offset="100%" stop-color="#16324f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="600" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#FFFFFF">Indexing for AI Workloads</text>
+  <text x="600" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#C9D9E3">Exact lookup vs. approximate nearest-neighbor search</text>
+
+  <!-- Left panel: B-tree -->
+  <text x="290" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#8FD3C7">B-Tree Index</text>
+  <text x="290" y="172" text-anchor="middle" font-family="Calibri, sans-serif" font-size="14" fill="#C9D9E3">Exact results, every time</text>
+
+  <!-- B-tree structure -->
+  <circle cx="290" cy="220" r="22" fill="#8FD3C7"/>
+  <text x="290" y="226" text-anchor="middle" font-family="Calibri" font-size="13" fill="#0F2540">50</text>
+
+  <circle cx="200" cy="290" r="18" fill="#C9D9E3"/>
+  <text x="200" y="295" text-anchor="middle" font-family="Calibri" font-size="12" fill="#0F2540">20</text>
+  <circle cx="380" cy="290" r="18" fill="#C9D9E3"/>
+  <text x="380" y="295" text-anchor="middle" font-family="Calibri" font-size="12" fill="#0F2540">80</text>
+
+  <line x1="290" y1="242" x2="200" y2="272" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="290" y1="242" x2="380" y2="272" stroke="#FFFFFF" stroke-width="2"/>
+
+  <circle cx="150" cy="360" r="15" fill="#3A4A5A" stroke="#8FD3C7" stroke-width="1.5"/>
+  <circle cx="230" cy="360" r="15" fill="#3A4A5A" stroke="#8FD3C7" stroke-width="1.5"/>
+  <circle cx="340" cy="360" r="15" fill="#3A4A5A" stroke="#8FD3C7" stroke-width="1.5"/>
+  <circle cx="420" cy="360" r="15" fill="#3A4A5A" stroke="#FFD700" stroke-width="2.5"/>
+
+  <line x1="200" y1="308" x2="150" y2="345" stroke="#FFFFFF" stroke-width="1.5"/>
+  <line x1="200" y1="308" x2="230" y2="345" stroke="#FFFFFF" stroke-width="1.5"/>
+  <line x1="380" y1="308" x2="340" y2="345" stroke="#FFFFFF" stroke-width="1.5"/>
+  <line x1="380" y1="308" x2="420" y2="345" stroke="#FFFFFF" stroke-width="1.5"/>
+
+  <text x="290" y="410" text-anchor="middle" font-family="Calibri" font-size="13" fill="#FFD700">Guaranteed exact match</text>
+  <text x="290" y="430" text-anchor="middle" font-family="Calibri" font-size="12" fill="#C9D9E3">O(log n) seek, deterministic</text>
+
+  <!-- Divider -->
+  <line x1="600" y1="130" x2="600" y2="520" stroke="#8FD3C7" stroke-width="1" stroke-dasharray="6,6" opacity="0.5"/>
+
+  <!-- Right panel: HNSW -->
+  <text x="910" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#8FD3C7">HNSW Graph</text>
+  <text x="910" y="172" text-anchor="middle" font-family="Calibri, sans-serif" font-size="14" fill="#C9D9E3">Approximate results, tunable</text>
+
+  <!-- HNSW graph nodes -->
+  <circle cx="850" cy="220" r="12" fill="#C9D9E3"/>
+  <circle cx="960" cy="210" r="12" fill="#C9D9E3"/>
+  <circle cx="900" cy="270" r="12" fill="#C9D9E3"/>
+  <circle cx="1000" cy="260" r="12" fill="#C9D9E3"/>
+  <circle cx="830" cy="310" r="12" fill="#C9D9E3"/>
+  <circle cx="950" cy="330" r="15" fill="#FFD700" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="1030" cy="320" r="12" fill="#C9D9E3"/>
+  <circle cx="870" cy="370" r="12" fill="#C9D9E3"/>
+  <circle cx="1000" cy="390" r="12" fill="#C9D9E3"/>
+  <circle cx="920" cy="410" r="12" fill="#C9D9E3"/>
+
+  <g stroke="#8FD3C7" stroke-width="1.3" opacity="0.75">
+    <line x1="850" y1="220" x2="960" y2="210"/>
+    <line x1="850" y1="220" x2="900" y2="270"/>
+    <line x1="960" y1="210" x2="1000" y2="260"/>
+    <line x1="900" y1="270" x2="1000" y2="260"/>
+    <line x1="900" y1="270" x2="830" y2="310"/>
+    <line x1="900" y1="270" x2="950" y2="330"/>
+    <line x1="1000" y1="260" x2="1030" y2="320"/>
+    <line x1="1000" y1="260" x2="950" y2="330"/>
+    <line x1="830" y1="310" x2="870" y2="370"/>
+    <line x1="950" y1="330" x2="870" y2="370"/>
+    <line x1="950" y1="330" x2="1000" y2="390"/>
+    <line x1="1030" y1="320" x2="1000" y2="390"/>
+    <line x1="870" y1="370" x2="920" y2="410"/>
+    <line x1="1000" y1="390" x2="920" y2="410"/>
+  </g>
+
+  <text x="910" y="460" text-anchor="middle" font-family="Calibri" font-size="13" fill="#FFD700">Nearest-of-likely, not nearest-of-all</text>
+  <text x="910" y="480" text-anchor="middle" font-family="Calibri" font-size="12" fill="#C9D9E3">Recall tuned by ef_search / m</text>
+
+  <!-- Bottom bar -->
+  <rect x="60" y="555" width="1080" height="46" rx="8" fill="#3A4A5A" opacity="0.55"/>
+  <text x="600" y="583" text-anchor="middle" font-family="Calibri, sans-serif" font-size="15" fill="#FFFFFF">Same query pattern, different guarantee: exact vs. probable</text>
+</svg>

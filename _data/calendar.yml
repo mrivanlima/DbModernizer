@@ -87,7 +87,7 @@
 - date: 2026-08-18
   title: 'Indexing for AI Workloads: What Changes When Vectors Enter the Mix'
   bucket: performance
-  status: planned
+  status: published
   slug: indexing-for-ai-workloads
   type: article
 
