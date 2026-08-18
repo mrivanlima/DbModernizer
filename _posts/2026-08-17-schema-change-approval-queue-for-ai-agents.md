@@ -4,7 +4,7 @@ description: "A companion to my SQL Server AI agent firewall: instead of refusin
 categories: [case-studies]
 tags: [ai-agents, agent-access, database-governance, open-source, real-incidents]
 image: /assets/images/schema-change-approval-queue-for-ai-agents-01.png
-date: 2026-08-17 22:50:00 -0400
+date: 2026-08-17 22:20:00 -0400
 ---
 
 ![Diagram of SchemaApprovalGuard routing an AI agent's DDL statement into a pending-approval queue instead of executing or refusing it, with execution only happening after an explicit human approval inside the same transaction](/assets/images/schema-change-approval-queue-for-ai-agents-01.png)
