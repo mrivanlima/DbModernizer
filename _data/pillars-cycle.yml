@@ -29,3 +29,7 @@
   pillar_number: 4
   pillar_name: "Semantic Readiness"
   slug: silent-embedding-drift-vector-search
+- date: 2026-08-18
+  pillar_number: 5
+  pillar_name: "Intelligent Resiliency"
+  slug: self-healing-agents-wrong-recovery-call
