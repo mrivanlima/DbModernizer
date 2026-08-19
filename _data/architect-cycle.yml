@@ -3,3 +3,8 @@
   post_number: 1
   title: "Why Your AI Agents Keep Crashing (And Why You Need a DB Architect)"
   slug: "why-your-ai-agents-keep-crashing-database-architect"
+- date: 2026-08-19
+  series: "B"
+  post_number: 1
+  title: "AI Isn't Replacing DBAs; It's Upgrading Us to Agent Orchestrators"
+  slug: "ai-isnt-replacing-dbas-agent-orchestrators"
