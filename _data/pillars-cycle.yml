@@ -33,3 +33,7 @@
   pillar_number: 5
   pillar_name: "Intelligent Resiliency"
   slug: self-healing-agents-wrong-recovery-call
+- date: 2026-08-19
+  pillar_number: 6
+  pillar_name: "Quantum Readiness & Crypto-Agility"
+  slug: post-quantum-migration-database-encryption-inventory

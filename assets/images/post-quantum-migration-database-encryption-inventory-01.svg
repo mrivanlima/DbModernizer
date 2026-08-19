@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1e2f"/>
+      <stop offset="100%" stop-color="#0d2b3e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#e6f7f5">Database Encryption Inventory &amp; Crypto-Agility</text>
+  <text x="600" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#7fd8ce">Post-Quantum Migration Deadline: December 2030</text>
+
+  <!-- Database cylinder -->
+  <g>
+    <ellipse cx="180" cy="200" rx="90" ry="24" fill="#123b4d" stroke="#2fb8a8" stroke-width="2"/>
+    <rect x="90" y="200" width="180" height="140" fill="#123b4d" stroke="#2fb8a8" stroke-width="2"/>
+    <ellipse cx="180" cy="340" rx="90" ry="24" fill="#0d2b3e" stroke="#2fb8a8" stroke-width="2"/>
+    <text x="180" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e6f7f5" font-weight="bold">Database</text>
+    <text x="180" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#9fd8d0">TDE / columns</text>
+    <text x="180" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#9fd8d0">backups / replication</text>
+  </g>
+
+  <!-- Arrow to inventory -->
+  <path d="M 285 260 L 400 260" stroke="#2fb8a8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Inventory box -->
+  <g>
+    <rect x="410" y="190" width="220" height="140" rx="10" fill="#153f52" stroke="#4fd6c4" stroke-width="2"/>
+    <text x="520" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#e6f7f5">Crypto Inventory</text>
+    <text x="520" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#9fd8d0">TLS · TDE · KMS/HSM</text>
+    <text x="520" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#9fd8d0">column encryption</text>
+    <text x="520" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#9fd8d0">backup encryption</text>
+    <text x="520" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#e08a3c">RSA / ECC → flagged</text>
+  </g>
+
+  <!-- Arrow to agility layer -->
+  <path d="M 640 260 L 755 260" stroke="#2fb8a8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Crypto-agility layer -->
+  <g>
+    <rect x="765" y="190" width="230" height="140" rx="10" fill="#153f52" stroke="#4fd6c4" stroke-width="2"/>
+    <text x="880" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#e6f7f5">Crypto-Agility Layer</text>
+    <text x="880" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#9fd8d0">Swappable key mgmt</text>
+    <text x="880" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#9fd8d0">interface, not hard-wired</text>
+    <text x="880" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#5be0a0" font-weight="bold">FIPS 203/204/205 (PQC)</text>
+  </g>
+
+  <!-- Arrow to deadline -->
+  <path d="M 880 330 L 880 400" stroke="#2fb8a8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Timeline -->
+  <g>
+    <line x1="150" y1="480" x2="1050" y2="480" stroke="#3a6b76" stroke-width="3"/>
+    <circle cx="200" cy="480" r="8" fill="#7fd8ce"/>
+    <text x="200" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#cdeae5">2026</text>
+    <text x="200" y="528" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7fa9a3">Inventory + plan</text>
+
+    <circle cx="480" cy="480" r="8" fill="#7fd8ce"/>
+    <text x="480" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#cdeae5">2027-2028</text>
+    <text x="480" y="528" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7fa9a3">Pilot at scale</text>
+
+    <circle cx="780" cy="480" r="10" fill="#e08a3c"/>
+    <text x="780" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#f5c98a" font-weight="bold">Dec 2030</text>
+    <text x="780" y="528" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e0a860">Key establishment deadline</text>
+
+    <circle cx="1000" cy="480" r="8" fill="#e08a3c"/>
+    <text x="1000" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#f5c98a">Dec 2031</text>
+    <text x="1000" y="528" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e0a860">Digital signatures</text>
+  </g>
+
+  <!-- Harvest now decrypt later note -->
+  <rect x="150" y="560" width="900" height="45" rx="8" fill="#2a1620" stroke="#c2503f" stroke-width="1.5"/>
+  <text x="600" y="588" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#f0a99a">Harvest-now-decrypt-later: encrypted data copied today is at risk the moment the deadline is missed</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2fb8a8"/>
+    </marker>
+  </defs>
+</svg>
