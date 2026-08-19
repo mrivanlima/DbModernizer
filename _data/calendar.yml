@@ -94,7 +94,7 @@
 - date: 2026-08-19
   title: 'Index Bloat and Fragmentation: When to Rebuild, When to Ignore It'
   bucket: performance
-  status: planned
+  status: published
   slug: index-bloat-and-fragmentation
   type: tutorial
 
