@@ -4,7 +4,7 @@ description: "A fourth layer for AI agent database access: auditing the identity
 categories: [case-studies]
 tags: [ai-agents, agent-access, database-governance, open-source, real-incidents]
 image: /assets/images/ai-agent-credential-auditor-01.png
-date: 2026-08-19 08:35:00 -0400
+date: 2026-08-19 07:50:00 -0400
 ---
 
 ![Three flagged findings from an AI agent credential audit: a shared credential used by three agents, a credential 270 days overdue for rotation, and 67% of a granted access scope never actually used](/assets/images/ai-agent-credential-auditor-01.png)
