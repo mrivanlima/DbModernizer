@@ -101,7 +101,7 @@
 - date: 2026-08-20
   title: 'pgvector vs. Purpose-Built Vector Databases: A 2026 Decision Framework'
   bucket: vector-databases
-  status: planned
+  status: published
   slug: pgvector-vs-purpose-built-vector-databases
   type: article
 
