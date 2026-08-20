@@ -8,3 +8,8 @@
   post_number: 1
   title: "AI Isn't Replacing DBAs; It's Upgrading Us to Agent Orchestrators"
   slug: "ai-isnt-replacing-dbas-agent-orchestrators"
+- date: 2026-08-20
+  series: "A"
+  post_number: 2
+  title: "Stop LLMs From Hallucinating SQL: Self-Correcting Agents"
+  slug: "stop-llms-hallucinate-sql-self-correcting-agents"
