@@ -37,3 +37,7 @@
   pillar_number: 6
   pillar_name: "Quantum Readiness & Crypto-Agility"
   slug: post-quantum-migration-database-encryption-inventory
+- date: 2026-08-20
+  pillar_number: 7
+  pillar_name: "Cost & Efficiency"
+  slug: agent-query-billing-minimums-database-cost-blowout
