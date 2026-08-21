@@ -1,0 +1,78 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1f2e"/>
+      <stop offset="100%" stop-color="#0d2b3e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="600" y="65" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#e8f4f8" text-anchor="middle">Multi-Hop AI Agent Delegation</text>
+  <text x="600" y="98" font-family="Arial, sans-serif" font-size="17" fill="#7fd4c9" text-anchor="middle">What your database can and can't verify at each hop</text>
+
+  <!-- Human -->
+  <circle cx="110" cy="280" r="42" fill="#134e5e" stroke="#7fd4c9" stroke-width="2.5"/>
+  <text x="110" y="286" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle">Human</text>
+
+  <!-- Arrow 1 -->
+  <line x1="156" y1="280" x2="284" y2="280" stroke="#3fa796" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="220" y="265" font-family="Arial, sans-serif" font-size="12" fill="#9fd8cf" text-anchor="middle">OAuth consent</text>
+
+  <!-- Agent A -->
+  <rect x="290" y="240" width="120" height="80" rx="10" fill="#155263" stroke="#7fd4c9" stroke-width="2.5"/>
+  <text x="350" y="275" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Agent A</text>
+  <text x="350" y="296" font-family="Arial, sans-serif" font-size="11" fill="#a9e0d8" text-anchor="middle">token: verified</text>
+
+  <!-- Arrow 2 -->
+  <line x1="416" y1="280" x2="544" y2="280" stroke="#3fa796" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="480" y="265" font-family="Arial, sans-serif" font-size="12" fill="#9fd8cf" text-anchor="middle">spawns + exchanges</text>
+
+  <!-- Agent B -->
+  <rect x="550" y="240" width="120" height="80" rx="10" fill="#155263" stroke="#e8b84b" stroke-width="2.5"/>
+  <text x="610" y="275" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Agent B</text>
+  <text x="610" y="296" font-family="Arial, sans-serif" font-size="11" fill="#f2d489" text-anchor="middle">act claim: informational</text>
+
+  <!-- Arrow 3 -->
+  <line x1="676" y1="280" x2="804" y2="280" stroke="#e8b84b" stroke-width="3" marker-end="url(#arrow-y)"/>
+  <text x="740" y="265" font-family="Arial, sans-serif" font-size="12" fill="#f2d489" text-anchor="middle">spawns + exchanges</text>
+
+  <!-- Agent C -->
+  <rect x="810" y="240" width="120" height="80" rx="10" fill="#155263" stroke="#e8b84b" stroke-width="2.5"/>
+  <text x="870" y="275" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Agent C</text>
+  <text x="870" y="296" font-family="Arial, sans-serif" font-size="11" fill="#f2d489" text-anchor="middle">chain untraceable</text>
+
+  <!-- Arrow 4 -->
+  <line x1="936" y1="280" x2="1044" y2="280" stroke="#e05c5c" stroke-width="3.5" marker-end="url(#arrow-r)"/>
+
+  <!-- Database -->
+  <g>
+    <ellipse cx="1105" cy="258" rx="55" ry="16" fill="#1d3b4a" stroke="#e05c5c" stroke-width="2.5"/>
+    <path d="M 1050 258 L 1050 310 A 55 16 0 0 0 1160 310 L 1160 258" fill="#1d3b4a" stroke="#e05c5c" stroke-width="2.5"/>
+    <ellipse cx="1105" cy="310" rx="55" ry="16" fill="none" stroke="#e05c5c" stroke-width="2"/>
+  </g>
+  <text x="1105" y="345" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#f5b8b8" text-anchor="middle">Database</text>
+  <text x="1105" y="362" font-family="Arial, sans-serif" font-size="11" fill="#f5b8b8" text-anchor="middle">sees only Agent C</text>
+
+  <!-- dotted line showing broken visibility back to human -->
+  <path d="M 1105 240 C 900 130, 400 130, 110 238" fill="none" stroke="#e05c5c" stroke-width="1.5" stroke-dasharray="6,6"/>
+  <text x="600" y="150" font-family="Arial, sans-serif" font-size="13" fill="#e88888" text-anchor="middle" font-style="italic">RFC 8693: prior-actor claims are informational only — not enforceable</text>
+
+  <!-- Bottom caption box -->
+  <rect x="90" y="440" width="1020" height="130" rx="12" fill="#0f2836" stroke="#2a5468" stroke-width="1.5"/>
+  <text x="600" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Only 28% of organizations can trace agent actions back to a human sponsor</text>
+  <text x="600" y="500" font-family="Arial, sans-serif" font-size="13" fill="#a9c9d4" text-anchor="middle">across all environments — the database is the last enforcement point in a chain</text>
+  <text x="600" y="522" font-family="Arial, sans-serif" font-size="13" fill="#a9c9d4" text-anchor="middle">OAuth's own standard admits it cannot fully verify past the immediate hop.</text>
+  <text x="600" y="552" font-family="Arial, sans-serif" font-size="12" fill="#7fd4c9" text-anchor="middle">Data Platform Advisory · dataplatformadvisory.com</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3fa796"/>
+    </marker>
+    <marker id="arrow-y" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e8b84b"/>
+    </marker>
+    <marker id="arrow-r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e05c5c"/>
+    </marker>
+  </defs>
+</svg>
