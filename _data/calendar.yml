@@ -108,7 +108,7 @@
 - date: 2026-08-21
   title: 'Stale Statistics: The Silent Killer of Good Execution Plans'
   bucket: performance
-  status: planned
+  status: published
   slug: stale-statistics-silent-killer-of-execution-plans
   type: tutorial
 
