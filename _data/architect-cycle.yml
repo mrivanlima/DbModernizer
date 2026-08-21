@@ -13,3 +13,8 @@
   post_number: 2
   title: "Stop LLMs From Hallucinating SQL: Self-Correcting Agents"
   slug: "stop-llms-hallucinate-sql-self-correcting-agents"
+- date: 2026-08-21
+  series: "B"
+  post_number: 2
+  title: "Pydantic is Just Relational Data Modeling for Python"
+  slug: "pydantic-relational-data-modeling-python"
