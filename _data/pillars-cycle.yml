@@ -45,3 +45,7 @@
   pillar_number: 8
   pillar_name: "AI Agent Identity & Access"
   slug: multi-hop-ai-agent-delegation-database-identity
+- date: 2026-08-22
+  pillar_number: 1
+  pillar_name: "Cloud-Scale Infrastructure"
+  slug: data-gravity-shadow-database-replicas-ai-compute
