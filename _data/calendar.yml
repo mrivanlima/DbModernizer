@@ -115,14 +115,14 @@
 - date: 2026-08-22
   title: 'CI/CD for Databases: Why Most Teams Still Deploy Schema Changes by Hand'
   bucket: ci-cd
-  status: planned
+  status: published
   slug: ci-cd-for-databases
   type: article
 
 - date: 2026-08-22
   title: 'How a Routine Database Permission Change Took Down Half the Internet: The Cloudflare Outage'
   bucket: case-studies
-  status: planned
+  status: published
   slug: cloudflare-november-2025-outage-case-study
   type: article
   source_url: https://blog.cloudflare.com/18-november-2025-outage/
