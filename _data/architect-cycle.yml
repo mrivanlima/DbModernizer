@@ -18,3 +18,8 @@
   post_number: 2
   title: "Pydantic is Just Relational Data Modeling for Python"
   slug: "pydantic-relational-data-modeling-python"
+- date: 2026-08-22
+  series: "A"
+  post_number: 3
+  title: "Securing Autonomous AI: Data Governance for Agents"
+  slug: "securing-autonomous-ai-data-governance-for-agents"
