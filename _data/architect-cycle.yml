@@ -23,3 +23,8 @@
   post_number: 3
   title: "Securing Autonomous AI: Data Governance for Agents"
   slug: "securing-autonomous-ai-data-governance-for-agents"
+- date: 2026-08-23
+  series: "B"
+  post_number: 3
+  title: "LangGraph is a Stateful Database Problem"
+  slug: "langgraph-stateful-database-problem"
