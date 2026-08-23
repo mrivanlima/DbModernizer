@@ -49,3 +49,7 @@
   pillar_number: 1
   pillar_name: "Cloud-Scale Infrastructure"
   slug: data-gravity-shadow-database-replicas-ai-compute
+- date: 2026-08-23
+  pillar_number: 2
+  pillar_name: "Automated Operations & CI/CD"
+  slug: automated-rollback-database-schema-drift-ai-agents
