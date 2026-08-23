@@ -131,7 +131,7 @@
 - date: 2026-08-23
   title: "N+1 Queries: Catching the ORM Pattern That's Quietly Killing Your Database"
   bucket: data-engineering
-  status: planned
+  status: published
   slug: n-plus-1-queries-orm-pattern
   type: tutorial
 
