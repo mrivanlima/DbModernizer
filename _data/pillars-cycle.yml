@@ -53,3 +53,7 @@
   pillar_number: 2
   pillar_name: "Automated Operations & CI/CD"
   slug: automated-rollback-database-schema-drift-ai-agents
+- date: 2026-08-24
+  pillar_number: 2
+  pillar_name: "Automated Operations & CI/CD"
+  slug: ai-generated-rollback-scripts-database-migration-data-loss
