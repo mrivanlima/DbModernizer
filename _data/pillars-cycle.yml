@@ -57,7 +57,3 @@
   pillar_number: 3
   pillar_name: "Intelligent Pipelines & Governance"
   slug: data-classification-drift-ai-agent-retrieval-governance
-- date: 2026-08-25
-  pillar_number: 2
-  pillar_name: "Automated Operations & CI/CD"
-  slug: ai-commit-volume-database-cicd-review-collapse
