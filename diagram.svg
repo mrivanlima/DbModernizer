@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1f33"/>
+      <stop offset="100%" stop-color="#0d2b3e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="65" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#e6f2f5">Knowledge Poisoning in RAG Pipelines</text>
+  <text x="60" y="95" font-family="Arial, sans-serif" font-size="15" fill="#7fb8c9">Where defenses are mature vs. where they're sparse</text>
+
+  <!-- Pipeline stages -->
+  <g font-family="Arial, sans-serif" font-size="15" fill="#cfe8ee" text-anchor="middle">
+    <rect x="70" y="220" width="200" height="90" rx="10" fill="#1a3a4d" stroke="#ff8a80" stroke-width="3"/>
+    <text x="170" y="255">Ingestion</text>
+    <text x="170" y="278" font-size="12" fill="#ff8a80">Sparse defenses (L1)</text>
+
+    <rect x="330" y="220" width="200" height="90" rx="10" fill="#1a3a4d" stroke="#3d6b7d" stroke-width="2"/>
+    <text x="430" y="255">Vector Store /</text>
+    <text x="430" y="273">Knowledge Base</text>
+
+    <rect x="590" y="220" width="200" height="90" rx="10" fill="#1a3a4d" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="690" y="255">Retrieval</text>
+    <text x="690" y="278" font-size="12" fill="#2dd4bf">Mature defenses (L2)</text>
+
+    <rect x="850" y="220" width="200" height="90" rx="10" fill="#1a3a4d" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="950" y="255">Generation</text>
+    <text x="950" y="278" font-size="12" fill="#2dd4bf">Mature defenses (L3)</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#7fb8c9" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <line x1="270" y1="265" x2="325" y2="265"/>
+    <line x1="530" y1="265" x2="585" y2="265"/>
+    <line x1="790" y1="265" x2="845" y2="265"/>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7fb8c9"/>
+    </marker>
+  </defs>
+
+  <!-- Poisoned row callout -->
+  <circle cx="170" cy="380" r="10" fill="#ff8a80"/>
+  <text x="60" y="420" font-family="Arial, sans-serif" font-size="14" fill="#ff8a80" font-weight="bold">Poisoned content enters here,</text>
+  <text x="60" y="440" font-family="Arial, sans-serif" font-size="14" fill="#ff8a80" font-weight="bold">looks statistically normal,</text>
+  <text x="60" y="460" font-family="Arial, sans-serif" font-size="14" fill="#ff8a80" font-weight="bold">persists across every query.</text>
+
+  <text x="60" y="560" font-family="Arial, sans-serif" font-size="14" fill="#7fb8c9">Data Platform Advisory — dataplatformadvisory.com</text>
+</svg>
