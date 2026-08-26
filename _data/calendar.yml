@@ -145,7 +145,7 @@
 - date: 2026-08-26
   title: The Database Modernization Checklist Every CTO Should Run Before Scaling AI
   bucket: governance
-  status: planned
+  status: published
   slug: database-modernization-checklist-for-ctos
   type: article
 
