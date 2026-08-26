@@ -61,3 +61,7 @@
   pillar_number: 4
   pillar_name: "Semantic Readiness"
   slug: knowledge-base-poisoning-vector-store-rag-database
+- date: 2026-08-26
+  pillar_number: 5
+  pillar_name: "Intelligent Resiliency"
+  slug: ai-agent-fanout-thundering-herd-database-resiliency
