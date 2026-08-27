@@ -65,3 +65,7 @@
   pillar_number: 5
   pillar_name: "Intelligent Resiliency"
   slug: ai-agent-fanout-thundering-herd-database-resiliency
+- date: 2026-08-27
+  pillar_number: 6
+  pillar_name: "Quantum Readiness & Crypto-Agility"
+  slug: cloud-kms-post-quantum-gap-database-encryption
