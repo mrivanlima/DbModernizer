@@ -69,3 +69,7 @@
   pillar_number: 6
   pillar_name: "Quantum Readiness & Crypto-Agility"
   slug: cloud-kms-post-quantum-gap-database-encryption
+- date: 2026-08-28
+  pillar_number: 7
+  pillar_name: "Cost & Efficiency"
+  slug: database-cost-attribution-blind-spot-ai-agents
