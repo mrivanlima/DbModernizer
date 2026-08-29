@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1f2e"/>
+      <stop offset="100%" stop-color="#0f2c3f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="30" fill="#e8f4f8" font-weight="bold">Orphaned AI Agent Database Access</text>
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="17" fill="#7fd4c4">Where the deprovisioning trail goes cold</text>
+
+  <!-- Timeline line -->
+  <line x1="90" y1="330" x2="1110" y2="330" stroke="#1e5266" stroke-width="4"/>
+
+  <!-- Node 1: Provisioned -->
+  <circle cx="140" cy="330" r="14" fill="#2dd4bf"/>
+  <text x="140" y="290" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" text-anchor="middle" font-weight="bold">Agent</text>
+  <text x="140" y="308" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" text-anchor="middle" font-weight="bold">Provisioned</text>
+  <text x="140" y="370" font-family="Arial, sans-serif" font-size="13" fill="#8fb5c4" text-anchor="middle">DB login created,</text>
+  <text x="140" y="388" font-family="Arial, sans-serif" font-size="13" fill="#8fb5c4" text-anchor="middle">scoped role granted</text>
+
+  <!-- Node 2: Retired -->
+  <circle cx="420" cy="330" r="14" fill="#f0b429"/>
+  <text x="420" y="290" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" text-anchor="middle" font-weight="bold">Agent Retired /</text>
+  <text x="420" y="308" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" text-anchor="middle" font-weight="bold">Replaced</text>
+  <text x="420" y="370" font-family="Arial, sans-serif" font-size="13" fill="#8fb5c4" text-anchor="middle">New model / framework —</text>
+  <text x="420" y="388" font-family="Arial, sans-serif" font-size="13" fill="#8fb5c4" text-anchor="middle">no shutdown checklist</text>
+
+  <!-- Node 3: No trigger -->
+  <circle cx="700" cy="330" r="14" fill="#ef4444"/>
+  <text x="700" y="290" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" text-anchor="middle" font-weight="bold">No Revocation</text>
+  <text x="700" y="308" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" text-anchor="middle" font-weight="bold">Trigger Fires</text>
+  <text x="700" y="370" font-family="Arial, sans-serif" font-size="13" fill="#8fb5c4" text-anchor="middle">Unlike HR offboarding —</text>
+  <text x="700" y="388" font-family="Arial, sans-serif" font-size="13" fill="#8fb5c4" text-anchor="middle">credential still authenticates</text>
+
+  <!-- Node 4: Orphaned -->
+  <circle cx="980" cy="330" r="14" fill="#ef4444"/>
+  <text x="980" y="290" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" text-anchor="middle" font-weight="bold">Orphaned Identity</text>
+  <text x="980" y="308" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" text-anchor="middle" font-weight="bold">Sits Live</text>
+  <text x="980" y="370" font-family="Arial, sans-serif" font-size="13" fill="#8fb5c4" text-anchor="middle">Found by audit —</text>
+  <text x="980" y="388" font-family="Arial, sans-serif" font-size="13" fill="#8fb5c4" text-anchor="middle">or reused by accident</text>
+
+  <!-- Connecting arrows -->
+  <line x1="154" y1="330" x2="406" y2="330" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="434" y1="330" x2="686" y2="330" stroke="#f0b429" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="714" y1="330" x2="966" y2="330" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5c8ba0"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom fix box -->
+  <rect x="60" y="470" width="1080" height="110" rx="10" fill="#0d2836" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="600" y="505" font-family="Arial, sans-serif" font-size="17" fill="#7fd4c4" text-anchor="middle" font-weight="bold">The structural fix: short-lived, auto-rotating identity</text>
+  <text x="600" y="535" font-family="Arial, sans-serif" font-size="14" fill="#c9dfe6" text-anchor="middle">Owner-tagged credentials · expiration by default · quarterly non-human identity reviews</text>
+  <text x="600" y="558" font-family="Arial, sans-serif" font-size="14" fill="#c9dfe6" text-anchor="middle">SPIFFE/SPIRE-style SVIDs that expire automatically when an agent stops being re-attested</text>
+
+  <text x="60" y="615" font-family="Arial, sans-serif" font-size="13" fill="#4a7b8c">dataplatformadvisory.com</text>
+</svg>

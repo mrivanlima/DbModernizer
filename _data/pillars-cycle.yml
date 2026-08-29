@@ -73,3 +73,7 @@
   pillar_number: 7
   pillar_name: "Cost & Efficiency"
   slug: database-cost-attribution-blind-spot-ai-agents
+- date: 2026-08-29
+  pillar_number: 8
+  pillar_name: "AI Agent Identity & Access"
+  slug: orphaned-ai-agent-database-access-deprovisioning
