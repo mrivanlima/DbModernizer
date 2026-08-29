@@ -1,0 +1,92 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F2540"/>
+      <stop offset="100%" stop-color="#16324f"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8FD3C7"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="600" y="55" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="30" fill="#FFFFFF" font-weight="bold">How a Slow Query Exhausted Neon's IP Addresses</text>
+  <text x="600" y="85" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="16" fill="#C9D9E3">May 2025 · AWS us-east-1 · Data Platform Advisory Real Incidents</text>
+
+  <g>
+    <rect x="40" y="140" width="250" height="170" rx="12" fill="#153450" stroke="#8FD3C7" stroke-width="2"/>
+    <circle cx="80" cy="180" r="18" fill="#8FD3C7"/>
+    <text x="80" y="186" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="18" fill="#0F2540" font-weight="bold">1</text>
+    <text x="165" y="186" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="17" fill="#FFFFFF" font-weight="bold">Plan Regression</text>
+    <text x="165" y="215" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">Activity Monitor query</text>
+    <text x="165" y="235" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">switches to a broad scan</text>
+    <text x="165" y="255" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">over tens of millions</text>
+    <text x="165" y="275" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">of rows</text>
+  </g>
+
+  <line x1="290" y1="225" x2="335" y2="225" stroke="#8FD3C7" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="335" y="140" width="250" height="170" rx="12" fill="#153450" stroke="#8FD3C7" stroke-width="2"/>
+    <circle cx="375" cy="180" r="18" fill="#8FD3C7"/>
+    <text x="375" y="186" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="18" fill="#0F2540" font-weight="bold">2</text>
+    <text x="460" y="186" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="17" fill="#FFFFFF" font-weight="bold">CPU Saturation</text>
+    <text x="460" y="215" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">Control-plane Postgres</text>
+    <text x="460" y="235" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">query times jump from</text>
+    <text x="460" y="255" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">~200ms to over</text>
+    <text x="460" y="275" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">100 seconds</text>
+  </g>
+
+  <line x1="585" y1="225" x2="630" y2="225" stroke="#8FD3C7" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="630" y="140" width="250" height="170" rx="12" fill="#153450" stroke="#8FD3C7" stroke-width="2"/>
+    <circle cx="670" cy="180" r="18" fill="#8FD3C7"/>
+    <text x="670" y="186" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="18" fill="#0F2540" font-weight="bold">3</text>
+    <text x="755" y="186" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="17" fill="#FFFFFF" font-weight="bold">Suspend Job Stalls</text>
+    <text x="755" y="215" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">Idle Computes stop</text>
+    <text x="755" y="235" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">being suspended;</text>
+    <text x="755" y="255" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">running pods climb</text>
+    <text x="755" y="275" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">from ~5k to ~8.1k</text>
+  </g>
+
+  <line x1="880" y1="225" x2="925" y2="225" stroke="#8FD3C7" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="925" y="140" width="235" height="170" rx="12" fill="#153450" stroke="#8FD3C7" stroke-width="2"/>
+    <circle cx="963" cy="180" r="18" fill="#8FD3C7"/>
+    <text x="963" y="186" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="18" fill="#0F2540" font-weight="bold">4</text>
+    <text x="1044" y="186" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="17" fill="#FFFFFF" font-weight="bold">IPs Exhausted</text>
+    <text x="1044" y="215" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">VPC subnet runs out</text>
+    <text x="1044" y="235" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">of assignable IPs;</text>
+    <text x="1044" y="255" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">new compute pods</text>
+    <text x="1044" y="275" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#C9D9E3">can't start</text>
+  </g>
+
+  <rect x="40" y="360" width="1120" height="200" rx="14" fill="#0B1D33" stroke="#3A4A5A" stroke-width="1"/>
+  <text x="600" y="400" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="18" fill="#8FD3C7" font-weight="bold">What drove the surge</text>
+
+  <g>
+    <text x="230" y="450" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="40" fill="#FFFFFF" font-weight="bold">5x</text>
+    <text x="230" y="480" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="14" fill="#C9D9E3">increase in database</text>
+    <text x="230" y="500" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="14" fill="#C9D9E3">creation rate</text>
+  </g>
+
+  <line x1="440" y1="420" x2="440" y2="520" stroke="#3A4A5A" stroke-width="1"/>
+
+  <g>
+    <text x="600" y="450" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="40" fill="#FFFFFF" font-weight="bold">50x</text>
+    <text x="600" y="480" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="14" fill="#C9D9E3">increase in branch</text>
+    <text x="600" y="500" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="14" fill="#C9D9E3">creation rate</text>
+  </g>
+
+  <line x1="760" y1="420" x2="760" y2="520" stroke="#3A4A5A" stroke-width="1"/>
+
+  <g>
+    <text x="970" y="450" text-anchor="middle" font-family="Cambria, Georgia, serif" font-size="40" fill="#FFFFFF" font-weight="bold">12k</text>
+    <text x="970" y="480" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="14" fill="#C9D9E3">total IPs available,</text>
+    <text x="970" y="500" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="14" fill="#C9D9E3">exhausted at ~8.1k pods</text>
+  </g>
+
+  <text x="600" y="600" text-anchor="middle" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#8FD3C7">Source: Neon's May/June 2025 stability postmortem series</text>
+</svg>

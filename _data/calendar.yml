@@ -159,7 +159,7 @@
 - date: 2026-08-29
   title: "When Success Becomes the Outage: Inside Neon's IP Exhaustion Incident"
   bucket: case-studies
-  status: planned
+  status: published
   slug: neon-ip-exhaustion-case-study
   type: article
   source_url: https://neon.com/blog/an-apology-and-a-recap-on-may-june-stability
