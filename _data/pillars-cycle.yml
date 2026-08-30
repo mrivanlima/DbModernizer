@@ -77,3 +77,7 @@
   pillar_number: 8
   pillar_name: "AI Agent Identity & Access"
   slug: orphaned-ai-agent-database-access-deprovisioning
+- date: 2026-08-30
+  pillar_number: 1
+  pillar_name: "Cloud-Scale Infrastructure"
+  slug: grid-curtailment-database-uptime-risk-ai-colocation

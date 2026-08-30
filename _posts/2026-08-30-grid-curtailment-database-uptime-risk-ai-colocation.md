@@ -1,0 +1,72 @@
+---
+title: "Grid Curtailment Clauses Are Now a Database Uptime Risk"
+description: "New AI-era colocation contracts let utilities curtail power during grid stress. If your database shares a facility with GPU clusters, it can go down too."
+date: 2026-08-30 03:45:00 -0400
+categories: [performance]
+tags: [cloud-infrastructure, colocation, capacity-planning, disaster-recovery, future-outlook]
+image: /assets/images/grid-curtailment-database-uptime-risk-ai-colocation-01.png
+---
+
+![Grid Curtailment Clauses Are Now a Database Uptime Risk](/assets/images/grid-curtailment-database-uptime-risk-ai-colocation-01.png)
+
+A growing number of new data center interconnection agreements now require the facility to accept utility-directed power curtailment, even emergency disconnection, during grid stress events — a condition utilities are attaching to new capacity specifically because AI GPU clusters are straining regional grids. If your production database shares power infrastructure with a GPU cluster in one of these facilities, your uptime SLA now has a dependency almost nobody has reviewed: the regional power grid's tolerance for AI load, not just your own infrastructure's reliability engineering.
+
+## What's actually happening
+
+For most of the cloud era, power was the one layer of infrastructure database teams never had to think about. A colocation or hyperscaler contract came with an implicit assumption: the facility keeps the lights on, full stop, and any curtailment was an emergency exception covered by generators and battery backup, not a routine operating condition written into the lease.
+
+That assumption is breaking under AI power demand. AI-associated data center power load is on track to hit roughly 10 GW globally by the end of 2026, and GPU rack power density has climbed from roughly 25 kW two years ago to 130+ kW today, with rack-scale systems like NVIDIA's GB200 NVL72 pulling up to 600 kW ([Inflect, "AI Inference Colocation: Power, Cooling, and Network Requirements for GPU-Ready Data Centers," 2026](https://inflect.com/blog/ai-inference-colocation-power-cooling-and-network-requirements-for-gpu-ready-data-centers){:target="_blank" rel="noopener noreferrer"}). Utilities can't build new transmission and generation capacity fast enough to keep up — interconnection queues in major US and European markets now run 24 to 36 months, and power transformer lead times stretch past four years in some regions ([Spheron, "Power-Bound, Not GPU-Bound: AI Data Center Power Constraints Are the Real 2026 Bottleneck"](https://www.spheron.network/blog/ai-data-center-power-constraints-2026/){:target="_blank" rel="noopener noreferrer"}).
+
+Faced with that gap, regulators and utilities are increasingly conditioning new large-load grid connections on the facility's willingness to shed load when the grid is stressed. Texas Senate Bill 6 is the clearest example: it requires any new energy load exceeding 75 MW — squarely in AI-data-center territory — to participate in demand response programs, with explicit provisions for emergency disconnection during grid stress events ([EY, "Demand Response and Data Center Growth"](https://www.ey.com/en_us/insights/power-utilities/demand-response-and-data-center-growth){:target="_blank" rel="noopener noreferrer"}). Utilities elsewhere are pursuing similar terms informally, as a condition of approving interconnection at all, because AI training and fine-tuning workloads are genuinely deferrable in a way that used to make demand response an easy trade for data center operators to accept ([Network World, "Power shortages, carbon capture, and AI automation: What's ahead for data centers in 2026"](https://www.networkworld.com/article/4117584/power-shortages-carbon-capture-and-ai-automation-whats-ahead-for-data-centers-in-2026.html){:target="_blank" rel="noopener noreferrer"}).
+
+The problem is that "deferrable" was defined with GPU training jobs in mind, not the transactional database sitting in the next row of racks. Curtailment and demand-response commitments are typically negotiated and scoped at the facility or campus level, not per-tenant, per-workload. A database instance that has nothing to do with AI training can end up inside the same power domain as a GPU cluster whose load profile is exactly what made the facility attractive to curtail in the first place.
+
+## Who this affects
+
+**DBAs and infrastructure teams operating in colocation or in regions with AI-heavy grid demand** are the most directly exposed — they're the ones who'll discover mid-incident that a "planned maintenance window" from the facility was actually a grid curtailment event with contractual teeth. **CTOs and VPs of infrastructure who sign colocation and interconnection agreements** are the ones who actually need to read the demand-response and curtailment clauses, which are typically negotiated by facilities or real estate teams with no visibility into what workloads will end up sharing that power domain. **Site reliability and resiliency leads** inherit the incident response burden when a curtailment event trips database failover in a way their runbooks never anticipated, because "utility-directed power reduction" isn't a failure mode most disaster recovery plans model. **FinOps and capacity planning teams** are affected too: facilities offering demand-response participation often do so in exchange for lower power rates or faster interconnection approval, which makes those facilities financially attractive precisely because of the risk this post describes — the discount and the exposure are the same line item.
+
+Multi-tenant colocation customers are the most exposed group specifically because they have the least visibility into and negotiating leverage over what else shares their power domain. A company building its own dedicated AI data center controls the tradeoff directly. A company leasing space in a shared facility that also hosts AI tenants inherits a curtailment risk profile it never agreed to and often doesn't know exists until it reads the fine print — or until an event happens.
+
+## When this becomes a real problem
+
+This is already live, not a future risk. Texas SB6's demand-response requirements for large loads are current law affecting data centers being sited and interconnected in Texas now, one of the largest and fastest-growing colocation markets for AI infrastructure. More than half of U.S. data center builds planned for 2026 face delays tied to power procurement and transformer lead times, which is precisely the pressure pushing operators toward demand-response commitments to get interconnection approved faster ([Spheron, 2026](https://www.spheron.network/blog/ai-data-center-power-constraints-2026/){:target="_blank" rel="noopener noreferrer"}). Power procurement now has to be secured years before a facility opens, and demand-response participation is one of the few levers operators have to compress that timeline — which means the incentive to accept curtailment terms is structural, not a temporary 2026 phenomenon, and will keep spreading to new markets as grid interconnection queues stay backed up through at least 2027-2028.
+
+The near-term risk window is narrower than the long-term trend: over the next 12 to 24 months, expect this to surface as isolated, poorly-communicated incidents at specific facilities rather than a widely publicized industry problem — curtailment clauses are contractual and often confidential, so the first most database teams will hear about one is when it fires. The trend line, though, points toward this becoming a standard feature of AI-adjacent colocation contracts industry-wide, not an edge case.
+
+## How this actually plays out in a database environment
+
+The mechanics are straightforward once you see them, but they rarely show up in a database team's mental model of what can take a system down.
+
+A colocation facility signs an interconnection agreement with the local utility that includes a demand-response commitment — the facility agrees to reduce total campus power draw by some percentage within minutes of a grid operator's signal, in exchange for faster or larger capacity allocation. The facility's engineering team implements this at the power-distribution level: certain racks or rows get shed first, prioritized by whatever criteria the facility's operations team set, which is rarely tenant-workload-aware in any granular way. A production database server sharing a power domain with GPU training racks can be in the shed group, especially if it's on shared PDUs or UPS capacity that wasn't provisioned with per-tenant isolation.
+
+When a curtailment event fires — a regional heat wave driving grid demand, a generation shortfall, a scheduled demand-response test — the facility reduces load according to its agreement. From the database team's point of view, this looks like a sudden, unscheduled power event: a host or rack loses power with no warning that maps to anything in their own change management, followed by whatever failover or recovery process is in place. If the database wasn't architected with multi-region or multi-facility failover — which many transactional systems still aren't, because until now "the facility just loses power" wasn't a modeled scenario outside of true emergencies — the result is an outage that traces back not to a hardware failure, a bad deploy, or a network issue, but to a power contract the database team never saw and the facility's operations team applied without workload-level awareness of what was on that circuit.
+
+The secondary effect compounds it: even where the database itself isn't shed, curtailment events often coincide with facility-wide cooling reductions to cut total power draw further, since cooling is one of the largest non-compute loads in a data center. Reduced cooling during a curtailment event can push adjacent racks — including database hosts not directly targeted by the curtailment — into thermal throttling or, in older facilities without modern cooling headroom, into automatic shutdown protection triggered by rising inlet temperatures. The database team sees a performance cliff or an unexplained restart with no obvious root cause, because the actual cause was a power event three rows away.
+
+## Actions to take now
+
+1. **Pull your colocation and interconnection contracts and read the demand-response and curtailment language specifically.** Don't rely on a summary from the facilities or real estate team — get the actual clause, ask what percentage load reduction the facility has committed to, how much notice (if any) is contractually required, and whether curtailment events are logged and disclosed to tenants.
+
+2. **Ask your provider directly whether your power domain is shared with AI/GPU tenants, and how database hosts are prioritized in a shed event.** This is a reasonable, specific question that most facilities can answer if asked directly — the answer tells you whether you're structurally exposed or not.
+
+3. **Check whether your database hosts are on isolated PDU/UPS circuits versus shared campus power.** Isolated circuits with dedicated backup are a meaningfully different risk profile than shared campus-level power, and this is often a negotiable (sometimes billable) upgrade rather than something you have to accept as fixed.
+
+4. **Model "facility-directed power curtailment" as an explicit failure scenario in your disaster recovery and resiliency runbooks**, separate from generic "power outage." The recovery pattern differs because curtailment events can be brief, recurring, and partially predictable (tied to grid conditions and season) rather than a single incident to recover from once.
+
+5. **For new colocation or facility selection, treat demand-response/curtailment exposure as a first-class site-selection criterion**, not an afterthought discovered after signing. Ask the specific question during procurement: does this facility's interconnection agreement include curtailment commitments, and what workloads share the affected power domain.
+
+6. **For business-critical databases, evaluate multi-region or multi-facility failover architecture with the explicit goal of decorrelating power risk**, not just geographic or hardware risk — a failover target in a facility with a different grid interconnection profile (different utility, different regional grid, no AI-heavy demand-response commitments) is a meaningfully different risk hedge than a failover target that happens to be a different building on the same regional grid.
+
+7. **Loop procurement, facilities, and database/infrastructure teams into the same review** when negotiating or renewing colocation contracts. This is currently a gap almost everywhere — facilities and real estate teams negotiate power and interconnection terms without database or SRE teams in the room, because until AI-driven demand response became common, that clause never mattered to application uptime.
+
+## Key takeaways
+
+- New AI-era colocation and interconnection agreements increasingly require facilities to accept utility-directed power curtailment during grid stress, a condition attached specifically because of AI GPU power demand.
+- Texas SB6 already mandates demand-response participation for new loads over 75 MW, with emergency disconnection provisions — current law, not a future proposal.
+- Curtailment and demand-response commitments are typically negotiated at the facility level, so a database sharing a power domain with GPU clusters can be affected even though the database workload itself is not AI training.
+- This isn't a five-year risk — it's active now in fast-growing AI colocation markets, and structurally likely to spread as grid interconnection queues stay backed up through 2027-2028.
+- The fix isn't complicated, but it requires database and infrastructure teams to actually read colocation power contracts and ask facility providers direct questions most teams currently never ask.
+
+Grid-driven power risk is a new item on the database resiliency checklist, and most teams haven't added it yet. If you're evaluating whether your database infrastructure is ready for what AI-era colocation actually involves, [get in touch](/about/#contact) — this is exactly the kind of gap that's cheap to close before an incident and expensive to explain after one.
+
+*Ivan Lima is a data engineer specializing in database modernization for AI systems. [Get in touch](/about/#contact) if your database needs to be ready for what's next.*
