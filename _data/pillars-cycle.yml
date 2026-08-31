@@ -81,3 +81,7 @@
   pillar_number: 1
   pillar_name: "Cloud-Scale Infrastructure"
   slug: grid-curtailment-database-uptime-risk-ai-colocation
+- date: 2026-08-31
+  pillar_number: 2
+  pillar_name: "Automated Operations & CI/CD"
+  slug: database-mcp-servers-bypass-cicd-gate
