@@ -85,3 +85,7 @@
   pillar_number: 2
   pillar_name: "Automated Operations & CI/CD"
   slug: database-mcp-servers-bypass-cicd-gate
+- date: 2026-09-01
+  pillar_number: 3
+  pillar_name: "Intelligent Pipelines & Governance"
+  slug: ai-agents-bypass-semantic-layer-metric-drift
