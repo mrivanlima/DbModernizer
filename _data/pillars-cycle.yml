@@ -89,3 +89,7 @@
   pillar_number: 3
   pillar_name: "Intelligent Pipelines & Governance"
   slug: ai-agents-bypass-semantic-layer-metric-drift
+- date: 2026-09-02
+  pillar_number: 4
+  pillar_name: "Semantic Readiness"
+  slug: multi-tenant-vector-database-cross-tenant-leakage
