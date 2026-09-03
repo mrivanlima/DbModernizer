@@ -93,3 +93,7 @@
   pillar_number: 4
   pillar_name: "Semantic Readiness"
   slug: multi-tenant-vector-database-cross-tenant-leakage
+- date: 2026-09-03
+  pillar_number: 5
+  pillar_name: "Intelligent Resiliency"
+  slug: shared-blast-radius-backups-ai-agent-database-deletion
