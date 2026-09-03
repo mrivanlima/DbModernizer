@@ -175,7 +175,7 @@
 - date: 2026-09-03
   title: 'RAG in Production: Chunking, Hybrid Retrieval, and What Actually Moves the Needle'
   bucket: ai-semantics
-  status: planned
+  status: published
   slug: rag-in-production-chunking-hybrid-retrieval
   type: article
 
