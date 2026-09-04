@@ -97,3 +97,7 @@
   pillar_number: 5
   pillar_name: "Intelligent Resiliency"
   slug: shared-blast-radius-backups-ai-agent-database-deletion
+- date: 2026-09-04
+  pillar_number: 6
+  pillar_name: "Quantum Readiness & Crypto-Agility"
+  slug: database-backup-dr-post-quantum-exposure-gap

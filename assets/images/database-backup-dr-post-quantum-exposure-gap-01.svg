@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1f2e"/>
+      <stop offset="100%" stop-color="#0d2b3e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#e8f4f8">Database Backup &amp; DR: The Post-Quantum Exposure Timeline</text>
+
+  <line x1="80" y1="330" x2="1120" y2="330" stroke="#1f4e5f" stroke-width="4"/>
+
+  <circle cx="200" cy="330" r="14" fill="#2dd4bf"/>
+  <text x="200" y="290" font-family="Arial, sans-serif" font-size="16" fill="#7fd8cc" text-anchor="middle">TLS Connection</text>
+  <text x="200" y="370" font-family="Arial, sans-serif" font-size="13" fill="#a8c5cf" text-anchor="middle">exposure window:</text>
+  <text x="200" y="390" font-family="Arial, sans-serif" font-size="13" fill="#a8c5cf" text-anchor="middle">seconds</text>
+  <rect x="170" y="405" width="60" height="10" fill="#2dd4bf"/>
+
+  <circle cx="470" cy="330" r="14" fill="#38bdf8"/>
+  <text x="470" y="290" font-family="Arial, sans-serif" font-size="16" fill="#8fd3f7" text-anchor="middle">Primary Database (TDE)</text>
+  <text x="470" y="370" font-family="Arial, sans-serif" font-size="13" fill="#a8c5cf" text-anchor="middle">exposure window:</text>
+  <text x="470" y="390" font-family="Arial, sans-serif" font-size="13" fill="#a8c5cf" text-anchor="middle">years (key rotation)</text>
+  <rect x="380" y="405" width="180" height="10" fill="#38bdf8"/>
+
+  <circle cx="760" cy="330" r="16" fill="#facc15"/>
+  <text x="760" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffe28a" text-anchor="middle">Offsite Backup / DR Replica</text>
+  <text x="760" y="370" font-family="Arial, sans-serif" font-size="13" fill="#a8c5cf" text-anchor="middle">exposure window:</text>
+  <text x="760" y="390" font-family="Arial, sans-serif" font-size="13" fill="#ffe28a" text-anchor="middle">retention period (5-30+ yrs)</text>
+  <rect x="600" y="405" width="320" height="10" fill="#facc15"/>
+
+  <circle cx="1030" cy="330" r="16" fill="#fb923c"/>
+  <text x="1030" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffcba4" text-anchor="middle">Cold Archive / Tape</text>
+  <text x="1030" y="370" font-family="Arial, sans-serif" font-size="13" fill="#a8c5cf" text-anchor="middle">exposure window:</text>
+  <text x="1030" y="390" font-family="Arial, sans-serif" font-size="13" fill="#ffcba4" text-anchor="middle">decades</text>
+  <rect x="960" y="405" width="140" height="10" fill="#fb923c"/>
+
+  <rect x="60" y="470" width="1080" height="110" rx="10" fill="#0f2836" stroke="#1f4e5f" stroke-width="1.5"/>
+  <text x="90" y="505" font-family="Arial, sans-serif" font-size="15" fill="#e8f4f8" font-weight="bold">Harvest-now-decrypt-later targets the longest exposure window, not the newest technology.</text>
+  <text x="90" y="530" font-family="Arial, sans-serif" font-size="14" fill="#a8c5cf">Backup and DR platforms began shipping hybrid post-quantum key exchange in 2026 -- years behind TLS and cloud KMS.</text>
+  <text x="90" y="552" font-family="Arial, sans-serif" font-size="14" fill="#a8c5cf">A backup encrypted today with classical crypto stays exposed for its entire retention period, wherever it's copied.</text>
+
+  <text x="60" y="610" font-family="Arial, sans-serif" font-size="13" fill="#5f8a9a">Data Platform Advisory -- 8 Pillars: Quantum Readiness &amp; Crypto-Agility</text>
+</svg>
