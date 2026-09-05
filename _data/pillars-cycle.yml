@@ -101,3 +101,7 @@
   pillar_number: 6
   pillar_name: "Quantum Readiness & Crypto-Agility"
   slug: database-backup-dr-post-quantum-exposure-gap
+- date: 2026-09-05
+  pillar_number: 7
+  pillar_name: "Cost & Efficiency"
+  slug: agent-memory-unbounded-vector-database-storage-cost

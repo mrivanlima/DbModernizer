@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1e2f"/>
+      <stop offset="100%" stop-color="#0d2b3e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#e8f4f8">Agent Memory: The Retention Policy Nobody Wrote</text>
+
+  <!-- Axes -->
+  <line x1="120" y1="500" x2="1120" y2="500" stroke="#3d6b7d" stroke-width="2"/>
+  <line x1="120" y1="500" x2="120" y2="130" stroke="#3d6b7d" stroke-width="2"/>
+  <text x="600" y="545" font-family="Arial, sans-serif" font-size="18" fill="#9fc6d4" text-anchor="middle">Time since agent launched</text>
+  <text x="70" y="320" font-family="Arial, sans-serif" font-size="18" fill="#9fc6d4" text-anchor="middle" transform="rotate(-90 70 320)">Vector store size (GB)</text>
+
+  <!-- Unbounded growth line -->
+  <polyline points="120,470 250,440 380,395 510,335 640,270 770,225 900,185 1030,150 1120,130"
+            fill="none" stroke="#ff8a5c" stroke-width="4"/>
+  <text x="960" y="130" font-family="Arial, sans-serif" font-size="16" fill="#ff8a5c" font-weight="bold">Memory: no TTL, no pruning</text>
+
+  <!-- Managed line with pruning plateau -->
+  <polyline points="120,470 250,445 380,420 510,405 640,398 770,395 900,393 1030,392 1120,391"
+            fill="none" stroke="#5cd6b0" stroke-width="4"/>
+  <text x="900" y="415" font-family="Arial, sans-serif" font-size="16" fill="#5cd6b0" font-weight="bold">Managed: TTL + cold tiering</text>
+
+  <!-- annotation: 5-10x multiplier -->
+  <g transform="translate(180,180)">
+    <rect x="0" y="0" width="330" height="90" rx="8" fill="#0f3547" stroke="#2f5a6d" stroke-width="1.5"/>
+    <text x="16" y="30" font-family="Arial, sans-serif" font-size="16" fill="#e8f4f8" font-weight="bold">Chunking + embedding + index</text>
+    <text x="16" y="54" font-family="Arial, sans-serif" font-size="16" fill="#e8f4f8">metadata: 5-10x the size of the</text>
+    <text x="16" y="78" font-family="Arial, sans-serif" font-size="16" fill="#e8f4f8">original source content</text>
+  </g>
+
+  <!-- small icons: memory writes -->
+  <g fill="#9fc6d4">
+    <circle cx="150" cy="560" r="6"/>
+    <circle cx="200" cy="560" r="6"/>
+    <circle cx="250" cy="560" r="6"/>
+    <circle cx="300" cy="560" r="6"/>
+    <circle cx="350" cy="560" r="6"/>
+    <circle cx="400" cy="560" r="6"/>
+    <circle cx="450" cy="560" r="6"/>
+    <circle cx="500" cy="560" r="6"/>
+  </g>
+  <text x="325" y="600" font-family="Arial, sans-serif" font-size="15" fill="#7fa8b8" text-anchor="middle">Every conversation turn writes to memory — almost nothing ever removes it</text>
+</svg>
