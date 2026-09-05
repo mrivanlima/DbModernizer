@@ -182,14 +182,14 @@
 - date: 2026-09-05
   title: A CTO's Guide to Evaluating RAG Systems Before You Ship
   bucket: ai-semantics
-  status: planned
+  status: published
   slug: ctos-guide-to-evaluating-rag-systems
   type: article
 
 - date: 2026-09-05
   title: "Anatomy of an API Outage: What Broke When Cloudflare's Dashboard Went Down"
   bucket: case-studies
-  status: planned
+  status: published
   slug: cloudflare-september-2025-dashboard-api-outage-case-study
   type: article
   source_url: https://blog.cloudflare.com/deep-dive-into-cloudflares-sept-12-dashboard-and-api-outage/

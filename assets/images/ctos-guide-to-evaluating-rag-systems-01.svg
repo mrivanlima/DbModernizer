@@ -1,0 +1,52 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="630" fill="#0F2540"/>
+<text x="60" y="70" font-family="Georgia, serif" font-size="30" fill="#FFFFFF" font-weight="bold">RAG Evaluation: Four Checkpoints Before You Ship</text>
+<text x="60" y="100" font-family="Arial, sans-serif" font-size="16" fill="#C9D9E3">Where accuracy actually breaks in production retrieval-augmented generation</text>
+
+<!-- pipeline row -->
+<g font-family="Arial, sans-serif">
+  <!-- stage boxes -->
+  <rect x="60" y="150" width="240" height="140" rx="10" fill="#132C4A" stroke="#8FD3C7" stroke-width="2"/>
+  <text x="180" y="185" font-size="18" fill="#8FD3C7" text-anchor="middle" font-weight="bold">1. Retrieval Quality</text>
+  <text x="80" y="215" font-size="13" fill="#FFFFFF">Recall@k, Precision@k,</text>
+  <text x="80" y="235" font-size="13" fill="#FFFFFF">MRR, NDCG</text>
+  <text x="80" y="265" font-size="13" fill="#C9D9E3">Did we fetch the right</text>
+  <text x="80" y="282" font-size="13" fill="#C9D9E3">passages at all?</text>
+
+  <rect x="330" y="150" width="240" height="140" rx="10" fill="#132C4A" stroke="#8FD3C7" stroke-width="2"/>
+  <text x="450" y="185" font-size="18" fill="#8FD3C7" text-anchor="middle" font-weight="bold">2. Faithfulness</text>
+  <text x="350" y="215" font-size="13" fill="#FFFFFF">Groundedness scoring,</text>
+  <text x="350" y="235" font-size="13" fill="#FFFFFF">LLM-as-judge</text>
+  <text x="350" y="265" font-size="13" fill="#C9D9E3">Is the answer actually</text>
+  <text x="350" y="282" font-size="13" fill="#C9D9E3">supported by context?</text>
+
+  <rect x="600" y="150" width="240" height="140" rx="10" fill="#132C4A" stroke="#8FD3C7" stroke-width="2"/>
+  <text x="720" y="185" font-size="18" fill="#8FD3C7" text-anchor="middle" font-weight="bold">3. Hallucination</text>
+  <text x="620" y="215" font-size="13" fill="#FFFFFF">Unsupported claims,</text>
+  <text x="620" y="235" font-size="13" fill="#FFFFFF">contradiction detection</text>
+  <text x="620" y="265" font-size="13" fill="#C9D9E3">Does it invent facts not</text>
+  <text x="620" y="282" font-size="13" fill="#C9D9E3">in any retrieved doc?</text>
+
+  <rect x="870" y="150" width="270" height="140" rx="10" fill="#132C4A" stroke="#8FD3C7" stroke-width="2"/>
+  <text x="1005" y="185" font-size="18" fill="#8FD3C7" text-anchor="middle" font-weight="bold">4. Production Drift</text>
+  <text x="890" y="215" font-size="13" fill="#FFFFFF">Embedding drift, stale</text>
+  <text x="890" y="235" font-size="13" fill="#FFFFFF">indexes, query shift</text>
+  <text x="890" y="265" font-size="13" fill="#C9D9E3">Does quality hold up</text>
+  <text x="890" y="282" font-size="13" fill="#C9D9E3">after ship day?</text>
+
+  <!-- arrows -->
+  <polygon points="300,220 328,210 328,230" fill="#8FD3C7"/>
+  <polygon points="570,220 598,210 598,230" fill="#8FD3C7"/>
+  <polygon points="840,220 868,210 868,230" fill="#8FD3C7"/>
+</g>
+
+<!-- bottom stat bar -->
+<rect x="60" y="340" width="1080" height="200" rx="10" fill="#132C4A" stroke="#3A4A5A" stroke-width="1"/>
+<text x="90" y="380" font-family="Georgia, serif" font-size="20" fill="#8FD3C7" font-weight="bold">Why this matters at the CTO level</text>
+<text x="90" y="415" font-family="Arial, sans-serif" font-size="15" fill="#FFFFFF">Gartner: at least 50% of generative AI projects were abandoned after proof-of-concept, citing poor data</text>
+<text x="90" y="440" font-family="Arial, sans-serif" font-size="15" fill="#FFFFFF">quality and failed RAG implementations among the top causes.</text>
+<text x="90" y="475" font-family="Arial, sans-serif" font-size="15" fill="#FFFFFF">MIT Media Lab (2025): 95% of organizations saw no measurable P&amp;L return from generative AI pilots --</text>
+<text x="90" y="500" font-family="Arial, sans-serif" font-size="15" fill="#FFFFFF">data readiness and workflow integration, not model quality, were the deciding factor.</text>
+
+<text x="60" y="600" font-family="Arial, sans-serif" font-size="14" fill="#C9D9E3">Data Platform Advisory · dataplatformadvisory.com</text>
+</svg>
