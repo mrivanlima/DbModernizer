@@ -105,3 +105,7 @@
   pillar_number: 7
   pillar_name: "Cost & Efficiency"
   slug: agent-memory-unbounded-vector-database-storage-cost
+- date: 2026-09-06
+  pillar_number: 8
+  pillar_name: "AI Agent Identity & Access"
+  slug: agent-identity-platforms-database-connection-pooler-gap
