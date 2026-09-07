@@ -198,7 +198,7 @@
 - date: 2026-09-07
   title: 'Performance Tuning for Hybrid Search: When Vector and Keyword Search Compete for Resources'
   bucket: performance
-  status: planned
+  status: published
   slug: performance-tuning-for-hybrid-search
   type: article
 
