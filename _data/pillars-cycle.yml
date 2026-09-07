@@ -109,3 +109,7 @@
   pillar_number: 8
   pillar_name: "AI Agent Identity & Access"
   slug: agent-identity-platforms-database-connection-pooler-gap
+- date: 2026-09-07
+  pillar_number: 1
+  pillar_name: "Cloud-Scale Infrastructure"
+  slug: replication-lag-poisoning-ai-agent-context
