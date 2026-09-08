@@ -113,3 +113,7 @@
   pillar_number: 1
   pillar_name: "Cloud-Scale Infrastructure"
   slug: replication-lag-poisoning-ai-agent-context
+- date: 2026-09-08
+  pillar_number: 2
+  pillar_name: "Automated Operations & CI/CD"
+  slug: ai-triage-bot-database-cicd-credential-leak
