@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F2540"/>
+      <stop offset="1" stop-color="#16324f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="70" font-family="Georgia, serif" font-size="30" fill="#FFFFFF" font-weight="bold">Agentic AI Data Migration</text>
+  <text x="60" y="100" font-family="Georgia, serif" font-size="17" fill="#8FD3C7">What "AI doing the migration" actually means</text>
+
+  <!-- Source DB -->
+  <g>
+    <rect x="60" y="180" width="180" height="110" rx="10" fill="#16324f" stroke="#8FD3C7" stroke-width="2"/>
+    <text x="150" y="225" font-family="Calibri, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Source</text>
+    <text x="150" y="248" font-family="Calibri, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Database</text>
+    <ellipse cx="150" cy="200" rx="34" ry="10" fill="none" stroke="#C9D9E3" stroke-width="2"/>
+  </g>
+
+  <!-- Arrow to agent -->
+  <line x1="240" y1="235" x2="330" y2="235" stroke="#8FD3C7" stroke-width="3"/>
+  <polygon points="330,235 316,228 316,242" fill="#8FD3C7"/>
+
+  <!-- Agent box -->
+  <g>
+    <rect x="340" y="150" width="260" height="190" rx="10" fill="#8FD3C7" opacity="0.12" stroke="#8FD3C7" stroke-width="2"/>
+    <text x="470" y="182" font-family="Georgia, serif" font-size="18" fill="#8FD3C7" text-anchor="middle" font-weight="bold">AI Agent</text>
+    <text x="470" y="212" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Discovery</text>
+    <text x="470" y="238" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Schema Mapping</text>
+    <text x="470" y="264" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Code Translation</text>
+    <text x="470" y="290" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Reconciliation</text>
+    <text x="470" y="320" font-family="Calibri, sans-serif" font-size="12" fill="#C9D9E3" text-anchor="middle">no destructive access</text>
+  </g>
+
+  <!-- Arrow to gate -->
+  <line x1="600" y1="235" x2="690" y2="235" stroke="#8FD3C7" stroke-width="3"/>
+  <polygon points="690,235 676,228 676,242" fill="#8FD3C7"/>
+
+  <!-- Human approval gate -->
+  <g>
+    <rect x="700" y="170" width="170" height="150" rx="10" fill="#0F2540" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="6,4"/>
+    <circle cx="785" cy="220" r="22" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+    <line x1="785" y1="210" x2="785" y2="225" stroke="#FFFFFF" stroke-width="2.5"/>
+    <circle cx="785" cy="232" r="1.8" fill="#FFFFFF"/>
+    <text x="785" y="265" font-family="Georgia, serif" font-size="15" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Human</text>
+    <text x="785" y="285" font-family="Georgia, serif" font-size="15" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Approval</text>
+    <text x="785" y="305" font-family="Calibri, sans-serif" font-size="12" fill="#8FD3C7" text-anchor="middle">hard boundary</text>
+  </g>
+
+  <!-- Arrow to target -->
+  <line x1="870" y1="235" x2="960" y2="235" stroke="#8FD3C7" stroke-width="3"/>
+  <polygon points="960,235 946,228 946,242" fill="#8FD3C7"/>
+
+  <!-- Target DB -->
+  <g>
+    <rect x="970" y="180" width="170" height="110" rx="10" fill="#16324f" stroke="#8FD3C7" stroke-width="2"/>
+    <text x="1055" y="225" font-family="Calibri, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Target</text>
+    <text x="1055" y="248" font-family="Calibri, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Production</text>
+    <ellipse cx="1055" cy="200" rx="32" ry="10" fill="none" stroke="#C9D9E3" stroke-width="2"/>
+  </g>
+
+  <!-- Bottom caption strip -->
+  <rect x="60" y="400" width="1080" height="1.5" fill="#3A4A5A"/>
+  <text x="60" y="450" font-family="Calibri, sans-serif" font-size="16" fill="#C9D9E3">Agents compress discovery and translation 2–4x. Cutover still needs a human</text>
+  <text x="60" y="476" font-family="Calibri, sans-serif" font-size="16" fill="#C9D9E3">and a hard boundary — not just a system prompt telling the agent to stop.</text>
+
+  <text x="60" y="580" font-family="Georgia, serif" font-size="16" fill="#8FD3C7">Data Platform Advisory</text>
+  <text x="60" y="602" font-family="Calibri, sans-serif" font-size="13" fill="#C9D9E3">dataplatformadvisory.com</text>
+</svg>
