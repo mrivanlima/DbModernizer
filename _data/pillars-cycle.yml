@@ -117,3 +117,7 @@
   pillar_number: 2
   pillar_name: "Automated Operations & CI/CD"
   slug: ai-triage-bot-database-cicd-credential-leak
+- date: 2026-09-09
+  pillar_number: 3
+  pillar_name: "Intelligent Pipelines & Governance"
+  slug: data-contracts-ai-inference-speed

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1f2e"/>
+      <stop offset="100%" stop-color="#0e2b3d"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5fd4c8"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0645a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="66" font-family="Georgia, serif" font-size="30" fill="#eaf6f4" font-weight="bold">Data Contracts at AI Inference Speed</text>
+  <text x="60" y="96" font-family="Arial, sans-serif" font-size="16" fill="#8fb8c9">A silent schema change reaches an AI agent before any human review cycle can catch it</text>
+
+  <!-- Producer -->
+  <rect x="60" y="150" width="220" height="110" rx="10" fill="#123244" stroke="#2a5a6e" stroke-width="1.5"/>
+  <text x="170" y="185" font-family="Arial, sans-serif" font-size="15" fill="#eaf6f4" text-anchor="middle" font-weight="bold">Producer Pipeline</text>
+  <text x="170" y="210" font-family="Arial, sans-serif" font-size="12.5" fill="#9fc7d6" text-anchor="middle">minor version bump</text>
+  <text x="170" y="228" font-family="Arial, sans-serif" font-size="12.5" fill="#9fc7d6" text-anchor="middle">array field → string</text>
+  <text x="170" y="246" font-family="Arial, sans-serif" font-size="12.5" fill="#9fc7d6" text-anchor="middle">(structurally "valid")</text>
+
+  <!-- monitoring row -->
+  <rect x="330" y="150" width="220" height="110" rx="10" fill="#123244" stroke="#2a5a6e" stroke-width="1.5"/>
+  <text x="440" y="180" font-family="Arial, sans-serif" font-size="15" fill="#eaf6f4" text-anchor="middle" font-weight="bold">Traditional Monitoring</text>
+  <text x="440" y="204" font-family="Arial, sans-serif" font-size="12.5" fill="#7fd6a0" text-anchor="middle">✓ row count OK</text>
+  <text x="440" y="222" font-family="Arial, sans-serif" font-size="12.5" fill="#7fd6a0" text-anchor="middle">✓ freshness OK</text>
+  <text x="440" y="240" font-family="Arial, sans-serif" font-size="12.5" fill="#7fd6a0" text-anchor="middle">✓ null rate OK</text>
+
+  <!-- Semantic gap -->
+  <rect x="600" y="150" width="220" height="110" rx="10" fill="#3a1c1c" stroke="#7a3a34" stroke-width="1.5"/>
+  <text x="710" y="180" font-family="Arial, sans-serif" font-size="15" fill="#f3d9d6" text-anchor="middle" font-weight="bold">Semantic Meaning</text>
+  <text x="710" y="204" font-family="Arial, sans-serif" font-size="12.5" fill="#e0a29c" text-anchor="middle">✗ not checked</text>
+  <text x="710" y="222" font-family="Arial, sans-serif" font-size="12.5" fill="#e0a29c" text-anchor="middle">no exception fires</text>
+  <text x="710" y="240" font-family="Arial, sans-serif" font-size="12.5" fill="#e0a29c" text-anchor="middle">categories silently drop</text>
+
+  <!-- AI Agent -->
+  <rect x="870" y="150" width="270" height="110" rx="10" fill="#123244" stroke="#5fd4c8" stroke-width="2"/>
+  <text x="1005" y="180" font-family="Arial, sans-serif" font-size="15" fill="#eaf6f4" text-anchor="middle" font-weight="bold">AI Agent / RAG / Text-to-SQL</text>
+  <text x="1005" y="204" font-family="Arial, sans-serif" font-size="12.5" fill="#9fc7d6" text-anchor="middle">reads old field definition</text>
+  <text x="1005" y="222" font-family="Arial, sans-serif" font-size="12.5" fill="#9fc7d6" text-anchor="middle">applies it with full confidence</text>
+  <text x="1005" y="240" font-family="Arial, sans-serif" font-size="12.5" fill="#f2a09a" text-anchor="middle">wrong output, every query</text>
+
+  <line x1="280" y1="205" x2="325" y2="205" stroke="#5fd4c8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="550" y1="205" x2="595" y2="205" stroke="#5fd4c8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="820" y1="205" x2="865" y2="205" stroke="#e0645a" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+
+  <!-- timeline strip -->
+  <rect x="60" y="320" width="1080" height="70" rx="10" fill="#0d2836" stroke="#1e4a5c"/>
+  <text x="85" y="345" font-family="Arial, sans-serif" font-size="13" fill="#8fb8c9">Day 0: schema change ships</text>
+  <text x="85" y="366" font-family="Arial, sans-serif" font-size="13" fill="#e0a29c">Day 1–9: pipeline stays "green," agent output silently wrong at every call</text>
+  <text x="700" y="345" font-family="Arial, sans-serif" font-size="13" fill="#7fd6a0">Fix: semantic checks + contract gate in CI/CD</text>
+  <text x="700" y="366" font-family="Arial, sans-serif" font-size="13" fill="#7fd6a0">catches drift before it reaches agent context</text>
+
+  <!-- stats footer -->
+  <text x="60" y="450" font-family="Arial, sans-serif" font-size="14" fill="#eaf6f4" font-weight="bold">Only 32% of organizations have granular governance policies (Gartner, 2026)</text>
+  <text x="60" y="475" font-family="Arial, sans-serif" font-size="14" fill="#eaf6f4" font-weight="bold">By 2030, 50% of orgs will use AI agents to enforce machine-verifiable data contracts (Gartner)</text>
+  <text x="60" y="500" font-family="Arial, sans-serif" font-size="14" fill="#eaf6f4" font-weight="bold">44% of microservice outages trace to silent payload/field-deprecation drift (Integrate.io, 2026)</text>
+
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="13" fill="#5b7d8c">dataplatformadvisory.com — Pillar 3: Intelligent Pipelines &amp; Governance</text>
+</svg>
