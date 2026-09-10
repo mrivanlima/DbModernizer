@@ -121,3 +121,7 @@
   pillar_number: 3
   pillar_name: "Intelligent Pipelines & Governance"
   slug: data-contracts-ai-inference-speed
+- date: 2026-09-10
+  pillar_number: 4
+  pillar_name: "Semantic Readiness"
+  slug: embedding-model-deprecation-vector-index-lifecycle

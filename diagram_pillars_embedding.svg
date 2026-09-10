@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1e2e"/>
+      <stop offset="100%" stop-color="#0f2d3d"/>
+    </linearGradient>
+    <radialGradient id="glowTeal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e05252" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e05252" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="66" font-family="Georgia, serif" font-size="28" fill="#e6f4f1" font-weight="bold">Your Embedding Model Has an Expiration Date</text>
+  <text x="60" y="94" font-family="Arial, sans-serif" font-size="15" fill="#7fb8ac">Vendor deprecation is scheduled and announced — the risk is having no lifecycle owner</text>
+
+  <!-- Timeline bar -->
+  <line x1="90" y1="230" x2="1110" y2="230" stroke="#3a7d78" stroke-width="3"/>
+
+  <!-- GA stage -->
+  <circle cx="200" cy="230" r="10" fill="#2dd4bf"/>
+  <text x="200" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#9fd6cc" font-weight="bold">Generally Available</text>
+  <text x="200" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7fb8ac">model in production</text>
+
+  <!-- Deprecated stage -->
+  <circle cx="600" cy="230" r="10" fill="#f0b429"/>
+  <text x="600" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#f0d99a" font-weight="bold">Deprecated</text>
+  <text x="600" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#d8c184">still callable — migration window open</text>
+
+  <!-- Retired stage -->
+  <circle cx="1000" cy="230" r="10" fill="#e05252"/>
+  <text x="1000" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#f0b3b3" font-weight="bold">Retired</text>
+  <text x="1000" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#d89a9a">endpoint stops answering</text>
+
+  <!-- Arrow -->
+  <polygon points="1105,224 1120,230 1105,236" fill="#e05252"/>
+
+  <!-- Clock icon near deprecated -->
+  <circle cx="600" cy="340" r="55" fill="url(#glowTeal)"/>
+  <circle cx="600" cy="340" r="46" fill="none" stroke="#2dd4bf" stroke-width="2.5"/>
+  <line x1="600" y1="340" x2="600" y2="305" stroke="#e6f4f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="600" y1="340" x2="625" y2="340" stroke="#e6f4f1" stroke-width="3" stroke-linecap="round"/>
+  <text x="600" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9fd6cc">6 months' notice is typical —</text>
+  <text x="600" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9fd6cc">a full re-embed often takes weeks to months</text>
+
+  <!-- Bottom panel: cost/consequence -->
+  <rect x="150" y="490" width="900" height="70" rx="8" fill="#123847" stroke="#e05252" stroke-width="1.5"/>
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e6f4f1" font-weight="bold">Rushed re-embed under deadline pressure</text>
+  <text x="600" y="544" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e6a3a3">= mixed-space contamination, skipped validation, silent quality loss</text>
+
+  <text x="60" y="600" font-family="Arial, sans-serif" font-size="13" fill="#5f9089">dataplatformadvisory.com</text>
+  <text x="1140" y="600" text-anchor="end" font-family="Arial, sans-serif" font-size="13" fill="#5f9089">8 Pillars: Semantic Readiness</text>
+</svg>
