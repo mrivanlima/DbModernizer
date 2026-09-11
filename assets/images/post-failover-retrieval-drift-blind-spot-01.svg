@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a1e33"/>
+      <stop offset="1" stop-color="#0f2b45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="60" y="66" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#e6f3f4">Failover Recovers the Database. Not the Truth.</text>
+
+  <g>
+    <rect x="60" y="110" width="500" height="440" rx="14" fill="#0d2740" stroke="#1c4a63" stroke-width="2"/>
+    <text x="90" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#5fd0c9">What the failover test checks</text>
+
+    <circle cx="110" cy="200" r="8" fill="#5fd0c9"/>
+    <text x="132" y="206" font-family="Arial, sans-serif" font-size="15" fill="#cfe8ea">Primary fails, replica promoted</text>
+
+    <circle cx="110" cy="240" r="8" fill="#5fd0c9"/>
+    <text x="132" y="246" font-family="Arial, sans-serif" font-size="15" fill="#cfe8ea">Traffic redirected within RTO</text>
+
+    <circle cx="110" cy="280" r="8" fill="#5fd0c9"/>
+    <text x="132" y="286" font-family="Arial, sans-serif" font-size="15" fill="#cfe8ea">Connections re-established</text>
+
+    <circle cx="110" cy="320" r="8" fill="#5fd0c9"/>
+    <text x="132" y="326" font-family="Arial, sans-serif" font-size="15" fill="#cfe8ea">Queries return 200s again</text>
+
+    <circle cx="110" cy="360" r="8" fill="#5fd0c9"/>
+    <text x="132" y="366" font-family="Arial, sans-serif" font-size="15" fill="#cfe8ea">Dashboards go green</text>
+
+    <rect x="90" y="410" width="440" height="110" rx="10" fill="#123650" stroke="#2a6b7d" stroke-width="1.5"/>
+    <text x="110" y="440" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#8fe3d8">Game day: PASSED</text>
+    <text x="110" y="465" font-family="Arial, sans-serif" font-size="13" fill="#b7d6da">23-second failover. RTO met.</text>
+    <text x="110" y="486" font-family="Arial, sans-serif" font-size="13" fill="#b7d6da">Zero alerts fired. Incident closed.</text>
+  </g>
+
+  <g>
+    <rect x="640" y="110" width="500" height="440" rx="14" fill="#2a1420" stroke="#7a2f3f" stroke-width="2"/>
+    <text x="670" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#f5a3ad">What no one measured</text>
+
+    <circle cx="690" cy="200" r="8" fill="#f5a3ad"/>
+    <text x="712" y="206" font-family="Arial, sans-serif" font-size="15" fill="#f2d4d8">Replica promoted from a lagging snapshot</text>
+
+    <circle cx="690" cy="240" r="8" fill="#f5a3ad"/>
+    <text x="712" y="246" font-family="Arial, sans-serif" font-size="15" fill="#f2d4d8">Vector index rebuilt from stale rows</text>
+
+    <circle cx="690" cy="280" r="8" fill="#f5a3ad"/>
+    <text x="712" y="286" font-family="Arial, sans-serif" font-size="15" fill="#f2d4d8">Retrieval quietly favors wrong matches</text>
+
+    <circle cx="690" cy="320" r="8" fill="#f5a3ad"/>
+    <text x="712" y="326" font-family="Arial, sans-serif" font-size="15" fill="#f2d4d8">Agent answers confidently, incorrectly</text>
+
+    <circle cx="690" cy="360" r="8" fill="#f5a3ad"/>
+    <text x="712" y="366" font-family="Arial, sans-serif" font-size="15" fill="#f2d4d8">No error, no alert, no SLO breach</text>
+
+    <rect x="670" y="410" width="440" height="110" rx="10" fill="#3a1a26" stroke="#8a3a4a" stroke-width="1.5"/>
+    <text x="690" y="440" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffb3bd">Behavioral drift: UNDETECTED</text>
+    <text x="690" y="465" font-family="Arial, sans-serif" font-size="13" fill="#e9c3ca">Support tickets surface 11-18 days later.</text>
+    <text x="690" y="486" font-family="Arial, sans-serif" font-size="13" fill="#e9c3ca">Root cause traced back to the failover.</text>
+  </g>
+
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="14" fill="#7fa3ad" text-anchor="middle">Data Platform Advisory — Intelligent Resiliency</text>
+</svg>

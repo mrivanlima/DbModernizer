@@ -125,3 +125,7 @@
   pillar_number: 4
   pillar_name: "Semantic Readiness"
   slug: embedding-model-deprecation-vector-index-lifecycle
+- date: 2026-09-11
+  pillar_number: 5
+  pillar_name: "Intelligent Resiliency"
+  slug: post-failover-retrieval-drift-blind-spot
