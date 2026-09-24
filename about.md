@@ -12,6 +12,8 @@ I also keep an eye on where quantum computing is headed and what it will eventua
 
 Companies come to me when their database has become the thing slowing down their AI initiatives — slow queries, brittle pipelines, no vector search, no CI/CD around schema changes, or just years of technical debt nobody wants to touch. I help modernize that foundation so AI systems built on top of it are fast, reliable, and trustworthy.
 
+For small and local businesses that want practical AI rather than a data-platform overhaul, I also run [Orlando AI Agency](https://orlandoaiagency.com/), which helps Central Florida businesses automate busywork and put AI to work in day-to-day operations. The AI features on this site are powered by Orlando AI Agency.
+
 ### Contact
 
 - Email: [mrivanlima@gmail.com](mailto:mrivanlima@gmail.com)
